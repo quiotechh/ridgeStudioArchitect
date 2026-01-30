@@ -130,17 +130,17 @@ const links = [
   },
   {
     label: "WhatsApp",
-    href: "https://wa.me/91XXXXXXXXXX",
+    href: "https://wa.me/919953332509",
     icon: MessageCircle,
   },
   {
     label: "Call",
-    href: "tel:+91XXXXXXXXXX",
+    href: "tel:+919953332509",
     icon: Phone,
   },
   {
     label: "Email",
-    href: "mailto:info@ridgestudioarchitects.com",
+    href: "mailto:ridgestudioarchitect25@gmail.com",
     icon: Mail,
   },
 ];
@@ -151,11 +151,11 @@ export default function LinksPage() {
       <div className="w-full max-w-md text-center">
         {/* Logo */}
         {/* Logo */}
-        <div className="flex justify-center -mb-12">
+        <div className="flex justify-center -mb-2">
           <Image
             src="/ridge_logo.png"
             alt="Ridge Studio Architects"
-            width={260}
+            width={120}
             height={120}
             className="object-contain"
             priority
