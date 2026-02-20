@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef } from "react";
-import { motion, useInView, AnimatePresence, cubicBezier } from "framer-motion";
+import { motion, useInView, cubicBezier } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight, Phone, Mail } from "lucide-react";
@@ -33,64 +33,139 @@ const categories: FurnitureCategory[] = [
   {
     id: "01",
     name: "Beds & Headboards",
-    description: "Custom bed frames and upholstered headboards designed to anchor the bedroom with presence and proportion.",
+    description:
+      "Custom bed frames and upholstered headboards designed to anchor the bedroom with presence and proportion.",
     count: "40+",
     icon: "◻",
   },
   {
     id: "02",
     name: "Sofas & Seating",
-    description: "Bespoke sofas, armchairs, and ottomans — shaped to fit your space, your body, and your aesthetic.",
+    description:
+      "Bespoke sofas, armchairs, and ottomans — shaped to fit your space, your body, and your aesthetic.",
     count: "60+",
     icon: "◇",
   },
   {
     id: "03",
     name: "Dining Tables",
-    description: "Statement dining tables in solid timber, stone, and metal — the centrepiece of every home.",
+    description:
+      "Statement dining tables in solid timber, stone, and metal — the centrepiece of every home.",
     count: "35+",
     icon: "◈",
   },
   {
     id: "04",
     name: "Storage & Wardrobes",
-    description: "Walk-in wardrobes, built-in shelving, and custom storage solutions that make organisation beautiful.",
+    description:
+      "Walk-in wardrobes, built-in shelving, and custom storage solutions that make organisation beautiful.",
     count: "80+",
     icon: "▣",
   },
   {
     id: "05",
     name: "Kitchen & Joinery",
-    description: "Custom kitchen cabinetry and joinery — precision-made to maximise every inch of your kitchen.",
+    description:
+      "Custom kitchen cabinetry and joinery — precision-made to maximise every inch of your kitchen.",
     count: "50+",
     icon: "○",
   },
   {
     id: "06",
     name: "Office & Study",
-    description: "Bespoke desks, bookshelves, and workspace furniture designed for focus, function, and beauty.",
+    description:
+      "Bespoke desks, bookshelves, and workspace furniture designed for focus, function, and beauty.",
     count: "30+",
     icon: "◎",
   },
 ];
 
 const gallery: GalleryItem[] = [
-  { id: "01", title: "The Arch Headboard", category: "Beds & Headboards", material: "Bouclé & Walnut", image: "/furniture/gallery-01.jpg", span: "tall" },
-  { id: "02", title: "Stone Top Dining Table", category: "Dining Tables", material: "Calacatta Marble & Oak", image: "/furniture/gallery-02.jpg", span: "normal" },
-  { id: "03", title: "Modular Sofa System", category: "Sofas & Seating", material: "Linen & Brass", image: "/furniture/gallery-03.jpg", span: "normal" },
-  { id: "04", title: "Fluted Walk-in Wardrobe", category: "Storage & Wardrobes", material: "Lacquered MDF & Cane", image: "/furniture/gallery-04.jpg", span: "tall" },
-  { id: "05", title: "Island Kitchen", category: "Kitchen & Joinery", material: "Smoked Oak & Terrazzo", image: "/furniture/gallery-05.jpg", span: "wide" },
-  { id: "06", title: "The Library Wall", category: "Office & Study", material: "Solid Teak", image: "/furniture/gallery-06.jpg", span: "normal" },
-  { id: "07", title: "Curved Armchair", category: "Sofas & Seating", material: "Velvet & Beech", image: "/furniture/gallery-07.jpg", span: "normal" },
-  { id: "08", title: "Platform Bed", category: "Beds & Headboards", material: "Black Walnut", image: "/furniture/gallery-08.jpg", span: "wide" },
-  { id: "09", title: "Open Shelving Unit", category: "Storage & Wardrobes", material: "Powder-coated Steel & Glass", image: "/furniture/gallery-09.jpg", span: "tall" },
+  {
+    id: "01",
+    title: "The Arch Headboard",
+    category: "Beds & Headboards",
+    material: "Bouclé & Walnut",
+    image: "/furniture/gallery-01.jpg",
+    span: "tall",
+  },
+  {
+    id: "02",
+    title: "Stone Top Dining Table",
+    category: "Dining Tables",
+    material: "Calacatta Marble & Oak",
+    image: "/furniture/gallery-02.jpg",
+    span: "normal",
+  },
+  {
+    id: "03",
+    title: "Modular Sofa System",
+    category: "Sofas & Seating",
+    material: "Linen & Brass",
+    image: "/furniture/gallery-03.jpg",
+    span: "normal",
+  },
+  {
+    id: "04",
+    title: "Fluted Walk-in Wardrobe",
+    category: "Storage & Wardrobes",
+    material: "Lacquered MDF & Cane",
+    image: "/furniture/gallery-04.jpg",
+    span: "tall",
+  },
+  {
+    id: "05",
+    title: "Island Kitchen",
+    category: "Kitchen & Joinery",
+    material: "Smoked Oak & Terrazzo",
+    image: "/furniture/gallery-05.jpg",
+    span: "wide",
+  },
+  {
+    id: "06",
+    title: "The Library Wall",
+    category: "Office & Study",
+    material: "Solid Teak",
+    image: "/furniture/gallery-06.jpg",
+    span: "normal",
+  },
+  {
+    id: "07",
+    title: "Curved Armchair",
+    category: "Sofas & Seating",
+    material: "Velvet & Beech",
+    image: "/furniture/gallery-07.jpg",
+    span: "normal",
+  },
+  {
+    id: "08",
+    title: "Platform Bed",
+    category: "Beds & Headboards",
+    material: "Black Walnut",
+    image: "/furniture/gallery-08.jpg",
+    span: "wide",
+  },
+  {
+    id: "09",
+    title: "Open Shelving Unit",
+    category: "Storage & Wardrobes",
+    material: "Powder-coated Steel & Glass",
+    image: "/furniture/gallery-09.jpg",
+    span: "tall",
+  },
 ];
 
 // ─────────────────────────────────────────────
 // CATEGORY CARD
 // ─────────────────────────────────────────────
 
-function CategoryCard({ cat, index }: { cat: FurnitureCategory; index: number }) {
+function CategoryCard({
+  cat,
+  index,
+}: {
+  cat: FurnitureCategory;
+  index: number;
+}) {
   const [hovered, setHovered] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-40px" });
@@ -117,13 +192,17 @@ function CategoryCard({ cat, index }: { cat: FurnitureCategory; index: number })
         <div className="flex items-start justify-between mb-6">
           <motion.span
             className="text-4xl leading-none transition-colors duration-400"
-            animate={{ color: hovered ? "rgba(245,240,232,0.2)" : "rgba(44,44,44,0.12)" }}
+            animate={{
+              color: hovered ? "rgba(245,240,232,0.2)" : "rgba(44,44,44,0.12)",
+            }}
           >
             {cat.icon}
           </motion.span>
           <motion.span
             className="text-3xl font-black leading-none transition-colors duration-400"
-            animate={{ color: hovered ? "rgba(245,240,232,0.9)" : "rgba(31,79,63,0.8)" }}
+            animate={{
+              color: hovered ? "rgba(245,240,232,0.9)" : "rgba(31,79,63,0.8)",
+            }}
           >
             {cat.count}
           </motion.span>
@@ -132,7 +211,9 @@ function CategoryCard({ cat, index }: { cat: FurnitureCategory; index: number })
         {/* Number */}
         <motion.span
           className="text-[10px] font-mono tracking-[0.3em] block mb-3 transition-colors duration-400"
-          animate={{ color: hovered ? "rgba(245,240,232,0.3)" : "rgba(44,44,44,0.2)" }}
+          animate={{
+            color: hovered ? "rgba(245,240,232,0.3)" : "rgba(44,44,44,0.2)",
+          }}
         >
           {cat.id}
         </motion.span>
@@ -148,7 +229,9 @@ function CategoryCard({ cat, index }: { cat: FurnitureCategory; index: number })
         {/* Description */}
         <motion.p
           className="text-sm leading-relaxed font-light transition-colors duration-400"
-          animate={{ color: hovered ? "rgba(245,240,232,0.6)" : "rgba(44,44,44,0.55)" }}
+          animate={{
+            color: hovered ? "rgba(245,240,232,0.6)" : "rgba(44,44,44,0.55)",
+          }}
         >
           {cat.description}
         </motion.p>
@@ -157,7 +240,11 @@ function CategoryCard({ cat, index }: { cat: FurnitureCategory; index: number })
       {/* Corner accent */}
       <motion.div
         className="absolute bottom-0 right-0 w-12 h-12 border-t border-l transition-colors duration-400"
-        animate={{ borderColor: hovered ? "rgba(245,240,232,0.1)" : "rgba(44,44,44,0.08)" }}
+        animate={{
+          borderColor: hovered
+            ? "rgba(245,240,232,0.1)"
+            : "rgba(44,44,44,0.08)",
+        }}
       />
     </motion.div>
   );
@@ -173,9 +260,11 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
   const isInView = useInView(ref, { once: true, margin: "-40px" });
 
   const heightClass =
-    item.span === "tall" ? "h-[500px] md:h-[580px]"
-    : item.span === "wide" ? "h-[300px] md:h-[340px]"
-    : "h-[360px] md:h-[420px]";
+    item.span === "tall"
+      ? "h-[500px] md:h-[580px]"
+      : item.span === "wide"
+        ? "h-[300px] md:h-[340px]"
+        : "h-[360px] md:h-[420px]";
 
   return (
     <motion.div
@@ -203,7 +292,7 @@ function GalleryCard({ item, index }: { item: GalleryItem; index: number }) {
       </motion.div>
 
       {/* Gradient */}
-      <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
 
       {/* Hover overlay */}
       <motion.div
@@ -252,12 +341,14 @@ export default function BespokeFurniturePage() {
 
   const isHeaderInView = useInView(headerRef, { once: true });
   const isCatInView = useInView(catRef, { once: true, margin: "-60px" });
-  const isGalleryInView = useInView(galleryRef, { once: true, margin: "-60px" });
+  const isGalleryInView = useInView(galleryRef, {
+    once: true,
+    margin: "-60px",
+  });
   const isCtaInView = useInView(ctaRef, { once: true, margin: "-60px" });
 
   return (
     <main className="w-full bg-[#F5F0E8]">
-
       {/* ── HERO ── */}
       <section className="relative w-full h-screen overflow-hidden bg-[#1a1a18]">
         <Image
@@ -302,7 +393,9 @@ export default function BespokeFurniturePage() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.78, ease }}
           >
-            Every piece we create is designed specifically for your space — proportioned, detailed, and finished to complement the architecture around it.
+            Every piece we create is designed specifically for your space —
+            proportioned, detailed, and finished to complement the architecture
+            around it.
           </motion.p>
         </div>
       </section>
@@ -310,7 +403,6 @@ export default function BespokeFurniturePage() {
       {/* ── CATEGORIES ── */}
       <section className="w-full bg-[#F5F0E8]">
         <div ref={catRef} className="px-10 md:px-16 xl:px-24 py-24 md:py-32">
-
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-16">
             <div>
@@ -344,7 +436,8 @@ export default function BespokeFurniturePage() {
               animate={isCatInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.35, ease }}
             >
-              Six categories. Hundreds of custom pieces. All made to order, all made to last.
+              Six categories. Hundreds of custom pieces. All made to order, all
+              made to last.
             </motion.p>
           </div>
 
@@ -359,8 +452,10 @@ export default function BespokeFurniturePage() {
 
       {/* ── GALLERY ── */}
       <section className="w-full bg-[#1f4f3f]">
-        <div ref={galleryRef} className="px-10 md:px-16 xl:px-24 py-24 md:py-32">
-
+        <div
+          ref={galleryRef}
+          className="px-10 md:px-16 xl:px-24 py-24 md:py-32"
+        >
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-b border-[#F5F0E8]/10 pb-14 mb-12">
             <div>
@@ -411,7 +506,6 @@ export default function BespokeFurniturePage() {
       <section className="w-full bg-[#F5F0E8] border-t border-[#2C2C2C]/10">
         <div ref={ctaRef} className="px-10 md:px-16 xl:px-24 py-24 md:py-32">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-
             {/* Left */}
             <div>
               <motion.div
@@ -429,11 +523,15 @@ export default function BespokeFurniturePage() {
               {["Order Your", "Custom", "Furniture."].map((line, i) => (
                 <div key={i} className="overflow-hidden">
                   <motion.h2
-                    className={`font-bold leading-[1.0] tracking-tight text-[clamp(2.4rem,5vw,4.2rem)] ${i === 2 ? "text-transparent" : "text-[#2C2C2C]"}`}
+                    className={`font-bold leading-none tracking-tight text-[clamp(2.4rem,5vw,4.2rem)] ${i === 2 ? "text-transparent" : "text-[#2C2C2C]"}`}
                     style={i === 2 ? { WebkitTextStroke: "2px #1f4f3f" } : {}}
                     initial={{ y: "110%" }}
                     animate={isCtaInView ? { y: "0%" } : {}}
-                    transition={{ duration: 0.85, delay: 0.15 + i * 0.12, ease }}
+                    transition={{
+                      duration: 0.85,
+                      delay: 0.15 + i * 0.12,
+                      ease,
+                    }}
                   >
                     {line}
                   </motion.h2>
@@ -446,7 +544,8 @@ export default function BespokeFurniturePage() {
                 animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.7, delay: 0.55, ease }}
               >
-                Tell us about your space, your style, and your budget. We'll design something made exactly for you — and only for you.
+                Tell us about your space, your style, and your budget. We{"'"}ll
+                design something made exactly for you — and only for you.
               </motion.p>
             </div>
 
@@ -491,8 +590,12 @@ export default function BespokeFurniturePage() {
                     <Phone className="w-3.5 h-3.5 text-[#1f4f3f] group-hover:text-[#F5F0E8] transition-colors duration-300" />
                   </div>
                   <div>
-                    <p className="text-[#2C2C2C]/35 text-[10px] tracking-[0.25em] uppercase font-medium">Call Us</p>
-                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">+91 98765 43210</p>
+                    <p className="text-[#2C2C2C]/35 text-[10px] tracking-[0.25em] uppercase font-medium">
+                      Call Us
+                    </p>
+                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
+                      +91 98765 43210
+                    </p>
                   </div>
                 </motion.a>
 
@@ -507,8 +610,12 @@ export default function BespokeFurniturePage() {
                     <Mail className="w-3.5 h-3.5 text-[#1f4f3f] group-hover:text-[#F5F0E8] transition-colors duration-300" />
                   </div>
                   <div>
-                    <p className="text-[#2C2C2C]/35 text-[10px] tracking-[0.25em] uppercase font-medium">Email Us</p>
-                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">hello@ridgestudio.in</p>
+                    <p className="text-[#2C2C2C]/35 text-[10px] tracking-[0.25em] uppercase font-medium">
+                      Email Us
+                    </p>
+                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
+                      hello@ridgestudio.in
+                    </p>
                   </div>
                 </motion.a>
               </div>
@@ -519,9 +626,15 @@ export default function BespokeFurniturePage() {
                 animate={isCtaInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.85 }}
               >
-                {["Made to Order", "Premium Materials", "Delivered & Installed"].map((tag, i) => (
+                {[
+                  "Made to Order",
+                  "Premium Materials",
+                  "Delivered & Installed",
+                ].map((tag, i) => (
                   <div key={tag} className="flex items-center gap-4">
-                    {i > 0 && <span className="w-1 h-1 rounded-full bg-[#2C2C2C]/20" />}
+                    {i > 0 && (
+                      <span className="w-1 h-1 rounded-full bg-[#2C2C2C]/20" />
+                    )}
                     <span className="text-[#2C2C2C]/35 text-[10px] tracking-[0.2em] uppercase font-medium">
                       {tag}
                     </span>
@@ -532,7 +645,6 @@ export default function BespokeFurniturePage() {
           </div>
         </div>
       </section>
-
     </main>
   );
 }
