@@ -1,106 +1,5 @@
 "use client";
 
-// import Image from "next/image";
-// import Link from "next/link";
-// import {
-//   Globe,
-//   Instagram,
-//   Phone,
-//   Mail,
-//   Briefcase,
-//   MessageCircle,
-// } from "lucide-react";
-
-// export default function LinksPage() {
-//   return (
-//     <main className="min-h-screen bg-[#1f4f3f] flex items-center justify-center px-4">
-//       <div className="w-full max-w-sm bg-[#f6f3ee] rounded-2xl shadow-xl p-6 text-center">
-
-//         {/* Logo */}
-//         <div className="flex justify-center mb-3">
-//           <Image
-//             src="/logo.png"
-//             alt="Ridge Studio Architects"
-//             width={90}
-//             height={90}
-//             priority
-//           />
-//         </div>
-
-//         {/* Tagline */}
-//         <p className="text-sm text-gray-600 mb-6">
-//           Architecture • Interior • Design
-//         </p>
-
-//         {/* Links */}
-//         <div className="space-y-3">
-//           <LinkButton
-//             href="https://ridgestudioarchitects.com"
-//             icon={<Globe size={18} />}
-//             label="Website"
-//           />
-
-//           <LinkButton
-//             href="https://ridgestudioarchitects.com/portfolio"
-//             icon={<Briefcase size={18} />}
-//             label="Portfolio"
-//           />
-
-//           <LinkButton
-//             href="https://instagram.com/ridgestudioarchitects"
-//             icon={<Instagram size={18} />}
-//             label="Instagram"
-//           />
-
-//           <LinkButton
-//             href="https://wa.me/91XXXXXXXXXX"
-//             icon={<MessageCircle size={18} />}
-//             label="WhatsApp"
-//           />
-
-//           <LinkButton
-//             href="tel:+91XXXXXXXXXX"
-//             icon={<Phone size={18} />}
-//             label="Call Us"
-//           />
-
-//           <LinkButton
-//             href="mailto:info@ridgestudioarchitects.com"
-//             icon={<Mail size={18} />}
-//             label="Email"
-//           />
-//         </div>
-
-//         {/* Footer */}
-//         <p className="text-xs text-gray-500 mt-6">
-//           © Ridge Studio Architects
-//         </p>
-//       </div>
-//     </main>
-//   );
-// }
-
-// function LinkButton({
-//   href,
-//   icon,
-//   label,
-// }: {
-//   href: string;
-//   icon: React.ReactNode;
-//   label: string;
-// }) {
-//   return (
-//     <Link
-//       href={href}
-//       target="_blank"
-//       className="flex items-center justify-center gap-2 w-full bg-[#1f4f3f] text-white py-3 rounded-xl font-medium hover:opacity-90 transition"
-//     >
-//       {icon}
-//       {label}
-//     </Link>
-//   );
-// }
-
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -153,7 +52,7 @@ export default function LinksPage() {
         {/* Logo */}
         <div className="flex justify-center -mb-2">
           <Image
-            src="/ridge_logo.png"
+            src="/logo/ridge_logo.png"
             alt="Ridge Studio Architects"
             width={120}
             height={120}
@@ -167,7 +66,7 @@ export default function LinksPage() {
           Ridge Studio Architects
         </h1>
         <p className="text-sm text-white/80 mb-6 mt-0">
-          Architecture • Interior • Design
+          Architecture • Interior • Structure
         </p>
 
         {/* Links */}
