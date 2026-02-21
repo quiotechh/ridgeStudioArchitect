@@ -25,13 +25,15 @@ const navLinks = [
 ];
 
 const services = [
-  { label: "Commercial Interiors", href: "/services" },
-  { label: "Residential Interiors", href: "/services" },
-  { label: "Architecture & Planning", href: "/services" },
-  { label: "Turnkey Projects", href: "/services" },
+  { label: "Commercial Interiors", href: "/services/commercial-interiors-exteriors" },
+  { label: "Residential Interiors", href: "/services/residential-interiors-exteriors" },
+  { label: "Architecture & Planning", href: "/services/architecture-planning" },
+  { label: "Landscaping", href: "/services/landscaping" },
+  { label: "Turnkey Projects", href: "/services/turnkey-projects" },
   { label: "Bespoke Furniture", href: "/bespoke-furniture" },
-  { label: "Renovation Projects", href: "/services" },
-  { label: "Facade & Exterior Design", href: "/services" },
+  { label: "Renovation Projects", href: "/services/renovation-projects" },
+  { label: "Structure Drawings", href: "/services/structure-drawing-services" },
+  { label: "Facade & Exterior Design", href: "/services/facade-exterior-design" },
 ];
 
 const socials = [
