@@ -166,6 +166,8 @@ export default function CTABanner() {
                     </p>
                     <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
                       +91 9953332509
+                      <br />
+                      +91 8851944757
                     </p>
                   </div>
                 </Link>
