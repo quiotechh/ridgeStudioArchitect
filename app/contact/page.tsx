@@ -213,6 +213,15 @@ export default function ContactPage() {
                   </span>
                 </Link>
                 <Link
+                  href="tel:+919953332509"
+                  className="group flex items-center gap-2 border border-[#F5F0E8]/15 px-4 py-2.5 hover:bg-[#F5F0E8]/10 transition-colors duration-300"
+                >
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#F5F0E8]/40" />
+                  <span className="text-[#F5F0E8]/60 text-xs tracking-[0.15em] font-medium group-hover:text-[#F5F0E8] transition-colors duration-300">
+                    +91 88519 44757
+                  </span>
+                </Link>
+                <Link
                   href="mailto:ridgestudioarchitect25@gmail.com"
                   className="group flex items-center gap-2 border border-[#F5F0E8]/15 px-4 py-2.5 hover:bg-[#F5F0E8]/10 transition-colors duration-300"
                 >
@@ -526,7 +535,7 @@ export default function ContactPage() {
                   Phone
                 </p>
                 <p className="text-[#F5F0E8]/75 text-sm group-hover:text-[#F5F0E8] transition-colors duration-300">
-                  +91 99533 32509
+                  +91 99533 32509 / +91 88519 44757
                 </p>
               </div>
             </Link>

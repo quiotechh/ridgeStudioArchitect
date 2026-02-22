@@ -55,7 +55,11 @@ export type ServicePageData = {
   process: ProcessStep[];
 
   // Gallery
-  galleryImages: { src: string; alt: string; span: "tall" | "normal" | "wide" }[];
+  galleryImages: {
+    src: string;
+    alt: string;
+    span: "tall" | "normal" | "wide";
+  }[];
 
   // CTA
   ctaLabel: string;
@@ -164,17 +168,33 @@ function GalleryPlaceholder({
 // MAIN TEMPLATE
 // ─────────────────────────────────────────────
 
-export default function ServicePageTemplate({ data }: { data: ServicePageData }) {
+export default function ServicePageTemplate({
+  data,
+}: {
+  data: ServicePageData;
+}) {
   const overviewRef = useRef<HTMLDivElement>(null);
   const offeringsRef = useRef<HTMLDivElement>(null);
   const processRef = useRef<HTMLDivElement>(null);
   const galleryRef = useRef<HTMLDivElement>(null);
   const ctaRef = useRef<HTMLElement>(null);
 
-  const isOverviewInView = useInView(overviewRef, { once: true, margin: "-60px" });
-  const isOfferingsInView = useInView(offeringsRef, { once: true, margin: "-60px" });
-  const isProcessInView = useInView(processRef, { once: true, margin: "-60px" });
-  const isGalleryInView = useInView(galleryRef, { once: true, margin: "-60px" });
+  const isOverviewInView = useInView(overviewRef, {
+    once: true,
+    margin: "-60px",
+  });
+  const isOfferingsInView = useInView(offeringsRef, {
+    once: true,
+    margin: "-60px",
+  });
+  const isProcessInView = useInView(processRef, {
+    once: true,
+    margin: "-60px",
+  });
+  const isGalleryInView = useInView(galleryRef, {
+    once: true,
+    margin: "-60px",
+  });
   const isCtaInView = useInView(ctaRef, { once: true, margin: "-80px" });
 
   // CTA mouse parallax
@@ -359,7 +379,10 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
 
       {/* ── 3. WHAT WE OFFER ── */}
       <section className="w-full bg-[#1f4f3f]">
-        <div ref={offeringsRef} className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32">
+        <div
+          ref={offeringsRef}
+          className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32"
+        >
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-b border-[#F5F0E8]/10 pb-14 mb-16">
             <div>
@@ -400,7 +423,11 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
           {/* Grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
             {data.offerings.map((offering, i) => (
-              <OfferingCard key={offering.number} offering={offering} index={i} />
+              <OfferingCard
+                key={offering.number}
+                offering={offering}
+                index={i}
+              />
             ))}
           </div>
         </div>
@@ -408,7 +435,10 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
 
       {/* ── 4. OUR PROCESS ── */}
       <section className="w-full bg-[#F5F0E8]">
-        <div ref={processRef} className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32">
+        <div
+          ref={processRef}
+          className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32"
+        >
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 mb-20">
             <div>
@@ -440,7 +470,8 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               animate={isProcessInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.35, ease }}
             >
-              Clear stages. Zero surprises. Complete transparency from first meeting to final handover.
+              Clear stages. Zero surprises. Complete transparency from first
+              meeting to final handover.
             </motion.p>
           </div>
 
@@ -498,7 +529,10 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
 
       {/* ── 5. GALLERY ── */}
       <section className="w-full bg-[#1f4f3f]">
-        <div ref={galleryRef} className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32">
+        <div
+          ref={galleryRef}
+          className="px-5 sm:px-8 md:px-16 xl:px-24 py-16 sm:py-24 md:py-32"
+        >
           {/* Header */}
           <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-8 border-b border-[#F5F0E8]/10 pb-14 mb-12">
             <div>
@@ -532,7 +566,8 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
               animate={isGalleryInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.6, delay: 0.35, ease }}
             >
-              Images coming soon. Placeholder spaces reserved for project photography.
+              Images coming soon. Placeholder spaces reserved for project
+              photography.
             </motion.p>
           </div>
 
@@ -669,6 +704,9 @@ export default function ServicePageTemplate({ data }: { data: ServicePageData })
                       </p>
                       <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
                         +91 9953332509
+                      </p>
+                      <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
+                        +91 8851944757
                       </p>
                     </div>
                   </Link>

@@ -175,6 +175,7 @@ export default function Footer() {
               >
                 <Phone className="w-4 h-4 shrink-0 text-[#F5F0E8]/30 group-hover:text-[#F5F0E8] transition-colors duration-300" />
                 <span className="text-sm">+91 9953332509</span>
+                <span className="text-sm">+91 8851944757</span>
               </Link>
 
               <Link
