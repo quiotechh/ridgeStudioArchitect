@@ -11,7 +11,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowUpRight, Play, Pause, Phone, Mail } from "lucide-react";
+import { ArrowUpRight, Phone, Mail } from "lucide-react";
 
 const ease = cubicBezier(0.76, 0, 0.24, 1);
 
@@ -27,8 +27,8 @@ const founders = [
     specialization: "Architecture & Planning",
     quote:
       "Architecture is not about buildings — it is about the people who inhabit them. Every line I draw is a conversation with the future.",
-    video: "/about/founder-1.mp4",
-    poster: "/about/founder-1-poster.jpg",
+    image: "/about/gaurav professional.jpg",
+    poster: "/about/gaurav professional.jpg",
   },
   {
     id: "02",
@@ -37,8 +37,8 @@ const founders = [
     specialization: "Interior & Spatial Design",
     quote:
       "An interior should feel inevitable — as though the space could never have existed any other way. That precision is what drives me.",
-    video: "/about/founder-2.mp4",
-    poster: "/about/founder-2-poster.jpg",
+    image: "/about/khushi professional.jpg",
+    poster: "/about/khushi professional.jpg",
   },
 ];
 
@@ -146,20 +146,9 @@ function FounderCard({
   founder: (typeof founders)[0];
   index: number;
 }) {
-  const [playing, setPlaying] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, margin: "-60px" });
-
-  const togglePlay = () => {
-    if (!videoRef.current) return;
-    if (playing) {
-      videoRef.current.pause();
-    } else {
-      videoRef.current.play();
-    }
-    setPlaying(!playing);
-  };
 
   return (
     <motion.div
@@ -172,40 +161,17 @@ function FounderCard({
       {/* Video */}
       <div
         className="relative aspect-3/4 overflow-hidden bg-[#163d30] group cursor-pointer"
-        onClick={togglePlay}
       >
-        <video
-          ref={videoRef}
-          src={founder.video}
-          poster={founder.poster}
-          loop
-          muted={false}
-          playsInline
+        <Image
+          src={founder.image}
+          alt={founder.name}
+          height={400}
+          width={300}
           className="w-full h-full object-cover opacity-85"
         />
 
         {/* Overlay linear */}
         <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
-
-        {/* Play / Pause button */}
-        <motion.div
-          className="absolute inset-0 flex items-center justify-center"
-          animate={{ opacity: playing ? 0 : 1 }}
-          whileHover={{ opacity: 1 }}
-          transition={{ duration: 0.3 }}
-        >
-          <motion.div
-            className="w-16 h-16 border-2 border-[#F5F0E8]/70 rounded-full flex items-center justify-center bg-black/20 backdrop-blur-sm"
-            whileHover={{ scale: 1.1 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            {playing ? (
-              <Pause className="w-6 h-6 text-[#F5F0E8]" />
-            ) : (
-              <Play className="w-6 h-6 text-[#F5F0E8] ml-1" />
-            )}
-          </motion.div>
-        </motion.div>
 
         {/* Number tag */}
         <div className="absolute top-5 left-5">
@@ -749,7 +715,7 @@ export default function AboutPage() {
                 >
                   <div>
                     <p className="text-[#F5F0E8]/50 text-[10px] tracking-[0.3em] uppercase mb-1 font-medium">
-                      Free Consultation
+                      Consultation at ₹250 / sq ft
                     </p>
                     <p className="text-[#F5F0E8] text-xl font-semibold tracking-tight">
                       Start Your Project
@@ -781,7 +747,10 @@ export default function AboutPage() {
                       Call Us
                     </p>
                     <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
-                      +91 98765 43210
+                      +91 9953332509
+                    </p>
+                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
+                      +91 8851944757
                     </p>
                   </div>
                 </motion.a>
@@ -801,7 +770,7 @@ export default function AboutPage() {
                       Email Us
                     </p>
                     <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
-                      hello@ridgestudio.in
+                      ridgestudioarchitect25@gmail.com
                     </p>
                   </div>
                 </motion.a>

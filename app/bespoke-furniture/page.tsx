@@ -594,13 +594,16 @@ export default function BespokeFurniturePage() {
                       Call Us
                     </p>
                     <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
-                      +91 98765 43210
+                      +91 9953332509
+                    </p>
+                    <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
+                      +91 8851944757
                     </p>
                   </div>
                 </motion.a>
 
                 <motion.a
-                  href="mailto:hello@ridgestudio.in"
+                  href="mailto:ridgestudioarchitect25@gmail.com"
                   className="group flex flex-col gap-3 border border-[#2C2C2C]/15 px-6 py-5 hover:border-[#1f4f3f] transition-colors duration-300"
                   initial={{ opacity: 0, y: 20 }}
                   animate={isCtaInView ? { opacity: 1, y: 0 } : {}}
@@ -614,7 +617,7 @@ export default function BespokeFurniturePage() {
                       Email Us
                     </p>
                     <p className="text-[#2C2C2C] text-sm font-semibold mt-0.5">
-                      hello@ridgestudio.in
+                      ridgestudioarchitect25@gmail.com
                     </p>
                   </div>
                 </motion.a>

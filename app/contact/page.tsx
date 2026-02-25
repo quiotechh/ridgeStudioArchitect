@@ -251,7 +251,9 @@ export default function ContactPage() {
               </p>
               {/* Consultation fee badge */}
               <div className="flex items-center gap-3 border border-[#F5F0E8]/10 px-4 py-3 w-fit">
-                <span className="text-[#F5F0E8] text-lg font-black">₹250</span>
+                <span className="text-[#F5F0E8] text-lg font-black">
+                  ₹250 / sq ft
+                </span>
                 <div>
                   <p className="text-[#F5F0E8]/60 text-[10px] tracking-[0.2em] uppercase font-medium">
                     Consultation Fee
@@ -341,12 +343,11 @@ export default function ContactPage() {
                 </span>
                 <div>
                   <p className="text-[#2C2C2C] text-sm font-semibold">
-                    Consultation Fee: ₹250
+                    Consultation Fee: ₹250 / sq ft
                   </p>
                   <p className="text-[#2C2C2C]/55 text-xs leading-relaxed mt-0.5 font-light">
-                    A refundable consultation fee of ₹250 applies for the first
-                    meeting. This amount is adjusted against your project if you
-                    proceed with us.
+                    This amount is adjusted against your project if you proceed
+                    with us.
                   </p>
                 </div>
               </div>

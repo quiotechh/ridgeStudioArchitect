@@ -669,7 +669,7 @@ export default function ServicePageTemplate({
                 >
                   <div>
                     <p className="text-[#F5F0E8]/50 text-[10px] tracking-[0.3em] uppercase mb-1 font-medium">
-                      Free Consultation
+                      Consultation at ₹250 / sq ft
                     </p>
                     <p className="text-[#F5F0E8] text-xl font-semibold tracking-tight">
                       Start Your Project
@@ -742,7 +742,7 @@ export default function ServicePageTemplate({
                 animate={isCtaInView ? { opacity: 1 } : {}}
                 transition={{ duration: 0.6, delay: 0.85 }}
               >
-                {["Free Consultation", "No Commitment", "Quick Response"].map(
+                {["Consultation", "No Commitment", "Quick Response"].map(
                   (tag, i) => (
                     <div key={tag} className="flex items-center gap-4">
                       {i > 0 && (
