@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Turnkey", "Projects."],
   heroSubtitle:
     "Complete end-to-end project delivery for residential and commercial builds. From first sketch to final handover — we manage everything.",
-  heroImage: "/services/turnkey-hero.jpg",
+  heroImage: "/turnkey.jpeg",
 
   overviewLabel: "The Service",
   overviewHeading: "One Team. Start to Finish.",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "100%", label: "In-House Execution" },
     { value: "0", label: "Hand-offs" },
   ],
-  overviewImage: "/services/turnkey-overview.jpg",
+  overviewImage: "/UG FLOOR REAR BEDROOM VIEW 4.jpg",
 
   offeringsLabel: "What Is Included",
   offeringsHeading: "Full Scope Delivery",
@@ -99,12 +99,16 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/turnkey-gallery-01.jpg", alt: "Villa Construction", span: "wide" },
-    { src: "/services/turnkey-gallery-02.jpg", alt: "Interior Finishing", span: "tall" },
-    { src: "/services/turnkey-gallery-03.jpg", alt: "Kitchen Installation", span: "normal" },
-    { src: "/services/turnkey-gallery-04.jpg", alt: "Completed Living Room", span: "normal" },
-    { src: "/services/turnkey-gallery-05.jpg", alt: "Commercial Fit-out", span: "normal" },
-    { src: "/services/turnkey-gallery-06.jpg", alt: "Final Handover", span: "tall" },
+    { src: "/turnkey(2).jpeg", alt: "Villa Construction", span: "wide" },
+    { src: "/bathroom(1).jpeg", alt: "Interior Finishing", span: "tall" },
+    {
+      src: "/kitchen_upperview.jpeg",
+      alt: "Kitchen Installation",
+      span: "normal",
+    },
+    { src: "/living room.jpeg", alt: "Completed Living Room", span: "normal" },
+    { src: "/hero/tv wall.png", alt: "Commercial Fit-out", span: "normal" },
+    { src: "/hall.jpeg", alt: "Final Handover", span: "tall" },
   ],
 
   ctaLabel: "Go Turnkey",

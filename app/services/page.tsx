@@ -4,6 +4,7 @@ import { useState, useRef } from "react";
 import { motion, useInView, AnimatePresence, cubicBezier } from "framer-motion";
 import { ArrowUpRight, Plus } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 const ease = cubicBezier(0.76, 0, 0.24, 1);
 
@@ -24,7 +25,7 @@ const services: Service[] = [
     short: "Offices, Retail & Corporate Spaces",
     description:
       "We transform commercial environments into powerful brand statements. From reception lobbies to full office fit-outs, every detail reflects your business identity with precision and purpose.",
-    image: "/services/commercial.jpg",
+    image: "/commercial interior.jpg",
     tags: ["Office Design", "Retail", "Corporate"],
     href: "/services/commercial-interiors-exteriors",
   },
@@ -34,7 +35,7 @@ const services: Service[] = [
     short: "Homes Designed for Living",
     description:
       "Your home should feel inevitable — as if it could only ever have looked this way. We craft residential spaces that balance beauty, comfort, and function in perfect proportion.",
-    image: "/services/residential.jpg",
+    image: "/white-bedroom.jpg",
     tags: ["Living Spaces", "Bedrooms", "Facades"],
     href: "/services/residential-interiors-exteriors",
   },
@@ -44,7 +45,7 @@ const services: Service[] = [
     short: "From Blueprint to Reality",
     description:
       "Rigorous architectural planning with a creative eye. We handle site analysis, concept design, working drawings, and full project coordination from start to finish.",
-    image: "/services/architecture.jpg",
+    image: "/Architectural_plan.png",
     tags: ["Site Planning", "Concept Design", "Drawings"],
     href: "/services/architecture-planning",
   },
@@ -54,7 +55,7 @@ const services: Service[] = [
     short: "Outdoor Spaces That Breathe",
     description:
       "We design landscapes that extend architecture into nature. From courtyard gardens to sprawling estate grounds, every element is composed with the same precision as the building itself.",
-    image: "/services/landscaping.jpg",
+    image: "/outdoor.jpeg",
     tags: ["Gardens", "Hardscape", "Green Design"],
     href: "/services/landscaping",
   },
@@ -64,7 +65,7 @@ const services: Service[] = [
     short: "Residential & Commercial",
     description:
       "Complete end-to-end project delivery. From first sketch to final handover, we manage every contractor, material, and milestone so you don't have to.",
-    image: "/services/turnkey.jpg",
+    image: "/drawing_room_inside.jpeg",
     tags: ["End-to-End", "Project Management", "Handover"],
     href: "/services/turnkey-projects",
   },
@@ -74,7 +75,7 @@ const services: Service[] = [
     short: "Reimagining Existing Spaces",
     description:
       "Breathing new life into old structures. We approach renovation with sensitivity to what exists and a bold vision for what it can become — respecting history while embracing the new.",
-    image: "/services/renovation.jpg",
+    image: "/DINNING TABLE  (1).jpg",
     tags: ["Refurbishment", "Remodelling", "Upgrades"],
     href: "/services/renovation-projects",
   },
@@ -84,7 +85,7 @@ const services: Service[] = [
     short: "Custom-Crafted for Every Space",
     description:
       "Furniture designed and built specifically for your space. Every piece is a collaboration — proportioned, detailed, and finished to match the architecture around it.",
-    image: "/services/furniture.jpg",
+    image: "/bespoke-furniture.png",
     tags: ["Custom Design", "Joinery", "Handcrafted"],
     href: "/bespoke-furniture",
   },
@@ -94,7 +95,7 @@ const services: Service[] = [
     short: "Engineered with Precision",
     description:
       "Detailed structural drawings and engineering documentation that form the backbone of every build. We ensure structural integrity is never compromised, no matter the complexity.",
-    image: "/services/structure.jpg",
+    image: "/structure-drawing-services.png",
     tags: ["Structural", "Engineering", "Documentation"],
     href: "/services/structure-drawing-services",
   },
@@ -104,7 +105,7 @@ const services: Service[] = [
     short: "The Face of Your Building",
     description:
       "A building's facade is its first impression. We design exteriors that command attention — combining material innovation, proportion, and light to create landmarks.",
-    image: "/services/facade.jpg",
+    image: "/elevation.jpeg",
     tags: ["Facade", "Cladding", "Exterior"],
     href: "/services/facade-exterior-design",
   },
@@ -114,7 +115,7 @@ const services: Service[] = [
     short: "Your Private Green Escape",
     description:
       "Transform your rooftop into a lush, functional retreat. We design terrace gardens that blend landscape, hardscape, and ambient lighting to create serene outdoor living spaces.",
-    image: "/services/terrace-garden.jpg",
+    image: "/terrace-garden.jpeg",
     tags: ["Terrace Garden", "Rooftop Design", "Landscape"],
     href: "/services/terrace-garden-design",
   },
@@ -124,7 +125,7 @@ const services: Service[] = [
     short: "Spaces Aligned With Positive Energy",
     description:
       "We integrate Vastu Shastra principles into every design — balancing energy flow, direction, and spatial harmony to create homes and offices that feel right from the inside out.",
-    image: "/services/vastu.jpg",
+    image: "/vastu.jpg",
     tags: ["Vastu Shastra", "Vastu Consultant", "Vastu Design"],
     href: "/services/vastu-consultation",
   },
@@ -207,11 +208,17 @@ function ServiceRow({ service, index }: { service: Service; index: number }) {
             <div className="grid grid-cols-1 md:grid-cols-2 border-t border-[#F5F0E8]/10">
               {/* Image Placeholder */}
               <div className="relative h-64 md:h-72 overflow-hidden bg-[#163d30]">
-                <div className="absolute inset-0 flex items-center justify-center">
+                <Image 
+                  src={service.image}
+                  alt={service.title}
+                  fill
+                  className="object-cover object-center"
+                />
+                {/* <div className="absolute inset-0 flex items-center justify-center">
                   <span className="text-[#F5F0E8]/5 text-[12vw] font-black select-none">
                     {service.number}
                   </span>
-                </div>
+                </div> */}
               </div>
 
               {/* Content */}

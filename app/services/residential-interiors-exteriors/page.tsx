@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Residential", "Interiors &", "Exteriors."],
   heroSubtitle:
     "Homes that feel inevitable — designed around how you live, crafted with materials that endure, and finished with precision that shows.",
-  heroImage: "/services/residential-hero.jpg",
+  heroImage: "/pink bedroom.jpeg",
 
   overviewLabel: "The Service",
   overviewHeading: "Your Home, Perfected",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "12+", label: "Years Experience" },
     { value: "100%", label: "Custom Design" },
   ],
-  overviewImage: "/services/residential-overview.jpg",
+  overviewImage: "/services/residential/final elevation.jpeg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Complete Home Design",
@@ -99,12 +99,16 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/residential-gallery-01.jpg", alt: "Living Room Interior", span: "tall" },
-    { src: "/services/residential-gallery-02.jpg", alt: "Master Bedroom", span: "normal" },
-    { src: "/services/residential-gallery-03.jpg", alt: "Modern Kitchen", span: "normal" },
-    { src: "/services/residential-gallery-04.jpg", alt: "Villa Exterior", span: "wide" },
-    { src: "/services/residential-gallery-05.jpg", alt: "Bathroom Design", span: "tall" },
-    { src: "/services/residential-gallery-06.jpg", alt: "Dining Space", span: "normal" },
+    {
+      src: "/hero/living_room.jpeg",
+      alt: "Living Room Interior",
+      span: "tall",
+    },
+    { src: "/hero/gray_bedroom.jpeg", alt: "Master Bedroom", span: "normal" },
+    { src: "/hero/kitchen.png", alt: "Modern Kitchen", span: "normal" },
+    { src: "/elevation.jpeg", alt: "Villa Exterior", span: "wide" },
+    { src: "/bathroom.jpeg", alt: "Bathroom Design", span: "tall" },
+    { src: "/DINNING TABLE  (1).jpg", alt: "Dining Space", span: "normal" },
   ],
 
   ctaLabel: "Design Your Dream Home",

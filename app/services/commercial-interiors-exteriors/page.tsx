@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Commercial", "Interiors &", "Exteriors."],
   heroSubtitle:
     "Workplaces, retail spaces, and corporate environments designed to embody your brand, impress your clients, and empower your team.",
-  heroImage: "/services/commercial-hero.jpg",
+  heroImage: "/commercial exterior.jpg",
 
   overviewLabel: "The Service",
   overviewHeading: "Spaces That Work as Hard as You Do",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "50+", label: "Corporate Clients" },
     { value: "98%", label: "On-Time Delivery" },
   ],
-  overviewImage: "/services/commercial-overview.jpg",
+  overviewImage: "/commercial exterior.jpg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Our Scope",
@@ -99,12 +99,12 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/commercial-gallery-01.jpg", alt: "Corporate Office Interior", span: "tall" },
-    { src: "/services/commercial-gallery-02.jpg", alt: "Retail Showroom", span: "normal" },
-    { src: "/services/commercial-gallery-03.jpg", alt: "Reception Lobby", span: "normal" },
-    { src: "/services/commercial-gallery-04.jpg", alt: "Restaurant Interior", span: "wide" },
-    { src: "/services/commercial-gallery-05.jpg", alt: "Conference Room", span: "normal" },
-    { src: "/services/commercial-gallery-06.jpg", alt: "Commercial Facade", span: "tall" },
+    { src: "/commercial exterior.jpg", alt: "Corporate Office Interior", span: "tall" },
+    { src: "/commercial exterior.jpg", alt: "Retail Showroom", span: "normal" },
+    { src: "/commercial exterior.jpg", alt: "Reception Lobby", span: "normal" },
+    { src: "/commercial exterior.jpg", alt: "Restaurant Interior", span: "wide" },
+    { src: "/commercial exterior.jpg", alt: "Conference Room", span: "normal" },
+    { src: "/commercial exterior.jpg", alt: "Commercial Facade", span: "tall" },
   ],
 
   ctaLabel: "Start Your Commercial Project",

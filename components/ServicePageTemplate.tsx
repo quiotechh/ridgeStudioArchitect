@@ -11,6 +11,7 @@ import {
 } from "framer-motion";
 import Link from "next/link";
 import { ArrowUpRight, Phone, Mail } from "lucide-react";
+import Image from "next/image";
 
 const ease = cubicBezier(0.76, 0, 0.24, 1);
 
@@ -142,24 +143,14 @@ function GalleryPlaceholder({
       initial={{ opacity: 0, y: 36 }}
       animate={isInView ? { opacity: 1, y: 0 } : {}}
       transition={{ duration: 0.7, delay: (index % 3) * 0.1, ease }}
-      className={`relative overflow-hidden break-inside-avoid bg-[#163d30] ${heightClass}`}
+      className={`relative overflow-hidden break-inside-avoid ${heightClass}`}
     >
-      {/* Placeholder content */}
-      <div className="absolute inset-0 flex items-center justify-center">
-        <span className="text-[#F5F0E8]/5 text-[10vw] font-black select-none">
-          {String(index + 1).padStart(2, "0")}
-        </span>
-      </div>
-
-      {/* Border styling */}
-      <div className="absolute inset-0 border border-[#F5F0E8]/5" />
-
-      {/* Label */}
-      <div className="absolute bottom-4 left-4 right-4">
-        <p className="text-[#F5F0E8]/20 text-[10px] tracking-[0.3em] uppercase font-medium">
-          {item.alt}
-        </p>
-      </div>
+      <Image
+        src={item.src}
+        alt={item.alt}
+        fill
+        className="object-cover"
+      />
     </motion.div>
   );
 }
@@ -211,11 +202,13 @@ export default function ServicePageTemplate({
       <section className="relative h-screen w-full overflow-hidden bg-[#0d2b22]">
         {/* Image placeholder — replace src later */}
         <div className="absolute inset-0 bg-[#0d2b22]">
-          <div className="absolute inset-0 flex items-center justify-center">
-            <span className="text-[#F5F0E8]/3 text-[18vw] font-black select-none pointer-events-none whitespace-nowrap">
-              RIDGE
-            </span>
-          </div>
+          <Image
+            src={data.heroImage}
+            alt={data.heroLabel}
+            fill
+            className="object-cover"
+            priority
+          />
         </div>
         <div className="absolute inset-0 bg-linear-to-b from-black/30 via-transparent to-black/60" />
 
@@ -356,22 +349,17 @@ export default function ServicePageTemplate({
 
             {/* Right — Image Placeholder */}
             <motion.div
-              className="relative h-90 sm:h-110 md:h-130 overflow-hidden bg-[#163d30]"
+              className="relative h-90 sm:h-110 md:h-130 overflow-hidden"
               initial={{ opacity: 0, scale: 0.96 }}
               animate={isOverviewInView ? { opacity: 1, scale: 1 } : {}}
               transition={{ duration: 0.9, delay: 0.25, ease }}
             >
-              <div className="absolute inset-0 flex items-center justify-center">
-                <span className="text-[#F5F0E8]/5 text-[14vw] font-black select-none">
-                  RS
-                </span>
-              </div>
-              <div className="absolute inset-0 border border-[#F5F0E8]/5" />
-              <div className="absolute bottom-6 left-6 bg-[#1f4f3f] px-5 py-4">
-                <span className="text-[#F5F0E8] text-xs tracking-[0.25em] uppercase font-semibold">
-                  Image Placeholder
-                </span>
-              </div>
+              <Image
+                src={data.overviewImage}
+                alt={data.overviewHeading}
+                fill
+                className="object-cover"
+              />
             </motion.div>
           </div>
         </div>

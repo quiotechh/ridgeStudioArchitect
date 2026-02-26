@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Vastu", "Consultation."],
   heroSubtitle:
     "We integrate Vastu Shastra principles into every design — balancing energy flow, direction, and spatial harmony to create homes and offices that feel right from the inside out.",
-  heroImage: "/services/vastu.jpg",
+  heroImage: "/vastu.jpg",
 
   overviewLabel: "The Service",
   overviewHeading: "Spaces Aligned With Positive Energy.",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "New & Existing", label: "Constructions Covered" },
     { value: "100%", label: "Design-Integrated Approach" },
   ],
-  overviewImage: "/services/vastu-overview.jpg",
+  overviewImage: "/vastu(1).jpg",
 
   offeringsLabel: "What Is Included",
   offeringsHeading: "Complete Vastu Design Service",
@@ -100,32 +100,32 @@ const data: ServicePageData = {
 
   galleryImages: [
     {
-      src: "/services/vastu-gallery-01.jpg",
+      src: "/turnkey(1).jpeg",
       alt: "Vastu Compliant Home Entry",
       span: "wide",
     },
     {
-      src: "/services/vastu-gallery-02.jpg",
+      src: "/turnkey(2).jpeg",
       alt: "Vastu Living Room Design",
       span: "tall",
     },
     {
-      src: "/services/vastu-gallery-03.jpg",
+      src: "/UG FLOOR REAR BEDROOM VIEW 3.jpg",
       alt: "Vastu Kitchen Placement",
       span: "normal",
     },
     {
-      src: "/services/vastu-gallery-04.jpg",
+      src: "/drawing_room_inside.jpeg",
       alt: "Pooja Room Vastu Design",
       span: "normal",
     },
     {
-      src: "/services/vastu-gallery-05.jpg",
+      src: "/office.jpg",
       alt: "Vastu Office Layout",
       span: "normal",
     },
     {
-      src: "/services/vastu-gallery-06.jpg",
+      src: "/garden.jpg",
       alt: "Vastu Compliant Bedroom",
       span: "tall",
     },

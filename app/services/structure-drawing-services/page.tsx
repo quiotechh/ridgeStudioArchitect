@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Structure", "Drawing", "Services."],
   heroSubtitle:
     "Detailed structural drawings and engineering documentation that form the backbone of every build — precision-engineered for safety and longevity.",
-  heroImage: "/services/structure-hero.jpg",
+  heroImage: "/Architectural_plan.png",
 
   overviewLabel: "The Service",
   overviewHeading: "The Backbone of Every Build",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "100%", label: "Code Compliance" },
     { value: "0", label: "Structural Failures" },
   ],
-  overviewImage: "/services/structure-overview.jpg",
+  overviewImage: "/architecture plan.jpg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Structural Services",
@@ -99,12 +99,24 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/structure-gallery-01.jpg", alt: "Structural Drawings", span: "wide" },
-    { src: "/services/structure-gallery-02.jpg", alt: "Foundation Work", span: "normal" },
-    { src: "/services/structure-gallery-03.jpg", alt: "RCC Frame", span: "tall" },
-    { src: "/services/structure-gallery-04.jpg", alt: "Steel Structure", span: "normal" },
-    { src: "/services/structure-gallery-05.jpg", alt: "Reinforcement Detail", span: "normal" },
-    { src: "/services/structure-gallery-06.jpg", alt: "Completed Structure", span: "tall" },
+    { src: "/structure-drawing.png", alt: "Structural Drawings", span: "wide" },
+    {
+      src: "/under construction(1).JPG",
+      alt: "Foundation Work",
+      span: "normal",
+    },
+    { src: "/structure-drawing-services.png", alt: "RCC Frame", span: "tall" },
+    { src: "/under construction.JPG", alt: "Steel Structure", span: "normal" },
+    {
+      src: "/structure-drawing(3).png",
+      alt: "Reinforcement Detail",
+      span: "normal",
+    },
+    {
+      src: "/structure-drawing(1).png",
+      alt: "Completed Structure",
+      span: "tall",
+    },
   ],
 
   ctaLabel: "Get Structural Drawings",

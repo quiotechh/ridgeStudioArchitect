@@ -23,7 +23,7 @@ const services: Service[] = [
     short: "Offices, Retail & Corporate Spaces",
     description:
       "We transform commercial environments into powerful brand statements. From reception lobbies to full office fit-outs, every detail reflects your business identity with precision and purpose.",
-    image: "/services/commercial.jpg",
+    image: "/DRAWING AREA  (4).jpg",
     tags: ["Office Design", "Retail", "Corporate"],
   },
   {
@@ -41,7 +41,7 @@ const services: Service[] = [
     short: "From Blueprint to Reality",
     description:
       "Rigorous architectural planning with a creative eye. We handle site analysis, concept design, working drawings, and full project coordination from start to finish.",
-    image: "/services/architecture.jpg",
+    image: "/architectural_plan.png",
     tags: ["Site Planning", "Concept Design", "Drawings"],
   },
   {
@@ -68,7 +68,7 @@ const services: Service[] = [
     short: "Reimagining Existing Spaces",
     description:
       "Breathing new life into old structures. We approach renovation with sensitivity to what exists and a bold vision for what it can become — respecting history while embracing the new.",
-    image: "/services/renovation.jpg",
+    image: "/hall.jpeg",
     tags: ["Refurbishment", "Remodelling", "Upgrades"],
   },
 ];
@@ -201,7 +201,6 @@ export default function ServicesSectionHome() {
 
   return (
     <section className="w-full bg-[#F5F0E8]">
-
       {/* Header */}
       <div
         ref={headerRef}
@@ -238,7 +237,8 @@ export default function ServicesSectionHome() {
           animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.7, delay: 0.35, ease }}
         >
-          From architecture to interiors, every discipline we practice is unified by one standard — excellence without compromise.
+          From architecture to interiors, every discipline we practice is
+          unified by one standard — excellence without compromise.
         </motion.p>
       </div>
 
@@ -270,7 +270,6 @@ export default function ServicesSectionHome() {
           <ArrowUpRight className="w-4 h-4 text-[#1f4f3f] group-hover:text-[#F5F0E8] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-all duration-300" />
         </Link>
       </motion.div>
-
     </section>
   );
 }

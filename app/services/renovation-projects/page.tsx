@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Renovation", "Projects."],
   heroSubtitle:
     "Breathing new life into existing structures — we approach every renovation with sensitivity to what exists and a bold vision for what it can become.",
-  heroImage: "/services/renovation-hero.jpg",
+  heroImage: "/DRAWING AREA  (4).jpg",
 
   overviewLabel: "The Service",
   overviewHeading: "Reimagine What Already Exists",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "30%", label: "Avg. Cost Savings vs New Build" },
     { value: "98%", label: "Client Satisfaction" },
   ],
-  overviewImage: "/services/renovation-overview.jpg",
+  overviewImage: "/blackwashroom.jpeg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Renovation Scope",
@@ -99,12 +99,20 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/renovation-gallery-01.jpg", alt: "Before & After Living Room", span: "wide" },
-    { src: "/services/renovation-gallery-02.jpg", alt: "Kitchen Remodel", span: "normal" },
-    { src: "/services/renovation-gallery-03.jpg", alt: "Heritage Restoration", span: "tall" },
-    { src: "/services/renovation-gallery-04.jpg", alt: "Bathroom Renovation", span: "normal" },
-    { src: "/services/renovation-gallery-05.jpg", alt: "Office Refurbishment", span: "normal" },
-    { src: "/services/renovation-gallery-06.jpg", alt: "Facade Renovation", span: "tall" },
+    {
+      src: "/lobby 3 view (1).jpeg",
+      alt: "Before & After Living Room",
+      span: "wide",
+    },
+    { src: "/hero/kitchen.png", alt: "Kitchen Remodel", span: "normal" },
+    {
+      src: "/heritage_restoration.jpg",
+      alt: "Heritage Restoration",
+      span: "tall",
+    },
+    { src: "/bathroom(2).jpeg", alt: "Bathroom Renovation", span: "normal" },
+    { src: "/office.jpg", alt: "Office Refurbishment", span: "normal" },
+    { src: "/facade.jpg", alt: "Facade Renovation", span: "tall" },
   ],
 
   ctaLabel: "Renovate Your Space",
