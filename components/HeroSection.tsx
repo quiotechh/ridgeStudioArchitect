@@ -13,22 +13,28 @@ type Slide = {
 
 const slides: Slide[] = [
   {
-    image: "/hero/slide1.jpg",
+    image: "/hero/gray_bedroom.jpeg",
     heading: "Designing Spaces That Inspire",
     subtitle: "Luxury Architecture & Interior Solutions",
     cta: "View Projects",
   },
   {
-    image: "/hero/slide2.jpg",
+    image: "/hero/living_room.jpeg",
     heading: "Modern Living, Timeless Design",
     subtitle: "Crafting Elegant Residential & Commercial Spaces",
     cta: "Explore Services",
   },
   {
-    image: "/hero/slide3.jpg",
+    image: "/hero/kitchen.png",
     heading: "Where Vision Meets Structure",
     subtitle: "Innovative Architecture with Purpose",
     cta: "Get Consultation",
+  },
+  {
+    image: "/hero/bedroom_1.jpeg",
+    heading: "Designing the Future of Living",
+    subtitle: "Sustainable Architecture for Modern Lifestyles",
+    cta: "Discover More",
   },
 ];
 

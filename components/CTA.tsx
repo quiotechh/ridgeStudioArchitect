@@ -204,7 +204,7 @@ export default function CTABanner() {
               animate={isInView ? { opacity: 1 } : {}}
               transition={{ duration: 0.6, delay: 0.85 }}
             >
-              {["Free Consultation", "No Commitment", "Quick Response"].map(
+              {["Consultation", "No Commitment", "Quick Response"].map(
                 (tag, i) => (
                   <div key={tag} className="flex items-center gap-4">
                     {i > 0 && (

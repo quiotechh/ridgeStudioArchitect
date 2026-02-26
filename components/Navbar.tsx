@@ -3,21 +3,40 @@
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-import { Sheet, SheetContent, SheetTitle, SheetTrigger } from "@/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/components/ui/sheet";
 import { Button } from "@/components/ui/button";
 import { Menu, ChevronDown } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 
 const serviceLinks = [
-  { label: "Commercial Interiors & Exteriors", href: "/services/commercial-interiors-exteriors" },
-  { label: "Residential Interiors & Exteriors", href: "/services/residential-interiors-exteriors" },
+  {
+    label: "Commercial Interiors & Exteriors",
+    href: "/services/commercial-interiors-exteriors",
+  },
+  {
+    label: "Residential Interiors & Exteriors",
+    href: "/services/residential-interiors-exteriors",
+  },
   { label: "Architecture & Planning", href: "/services/architecture-planning" },
   { label: "Landscaping", href: "/services/landscaping" },
   { label: "Turnkey Projects", href: "/services/turnkey-projects" },
   { label: "Renovation Projects", href: "/services/renovation-projects" },
   { label: "Bespoke Furniture", href: "/bespoke-furniture" },
-  { label: "Structure Drawing Services", href: "/services/structure-drawing-services" },
-  { label: "Facade & Exterior Design", href: "/services/facade-exterior-design" },
+  {
+    label: "Structure Drawing Services",
+    href: "/services/structure-drawing-services",
+  },
+  {
+    label: "Facade & Exterior Design",
+    href: "/services/facade-exterior-design",
+  },
+  { label: "Terrace Garden", href: "/services/terrace-garden" },
+  { label: "Vastu", href: "/services/vastu" },
 ];
 
 const navLinks = [
@@ -25,6 +44,7 @@ const navLinks = [
   { label: "About Us", href: "/about" },
   { label: "Services", href: "/services", hasDropdown: true },
   { label: "Portfolio", href: "/portfolio" },
+  { label: "Bespoke Furniture", href: "/bespoke-furniture" },
   { label: "Contact Us", href: "/contact" },
 ];
 
@@ -45,7 +65,10 @@ export default function Navbar() {
   // Close desktop dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
-      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+      if (
+        dropdownRef.current &&
+        !dropdownRef.current.contains(e.target as Node)
+      ) {
         setDesktopDropdownOpen(false);
       }
     };
@@ -92,7 +115,7 @@ export default function Navbar() {
         </Link>
 
         {/* ── Desktop Nav Links ── */}
-        <ul className="hidden lg:flex items-center gap-8">
+        <ul className="hidden lg:flex items-center gap-6">
           {navLinks.map((link) =>
             link.hasDropdown ? (
               <li
@@ -132,11 +155,13 @@ export default function Navbar() {
                           className="flex items-center justify-between px-5 py-3 border-b border-[#F5F0E8]/10 text-[#F5F0E8] text-[10px] tracking-[0.25em] uppercase font-semibold hover:bg-[#F5F0E8]/5 transition-colors duration-200"
                         >
                           All Services
-                          <span className="text-[#F5F0E8]/30 text-[9px]">{serviceLinks.length}</span>
+                          <span className="text-[#F5F0E8]/30 text-[9px]">
+                            {serviceLinks.length}
+                          </span>
                         </Link>
 
                         {/* Service Links */}
-                        <div className="py-1 max-h-[60vh] overflow-y-auto">
+                        <div className="py-1 max-h-[70vh] overflow-y-auto overflow-hidden">
                           {serviceLinks.map((service, i) => (
                             <Link
                               key={service.href}
@@ -242,7 +267,10 @@ export default function Navbar() {
                             initial={{ height: 0, opacity: 0 }}
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.3, ease: [0.76, 0, 0.24, 1] }}
+                            transition={{
+                              duration: 0.3,
+                              ease: [0.76, 0, 0.24, 1],
+                            }}
                             className="overflow-hidden"
                           >
                             <div className="flex flex-col border-l border-[#F5F0E8]/10 ml-2 pl-4 pb-2">
@@ -267,7 +295,9 @@ export default function Navbar() {
                                   <span className="text-[#F5F0E8]/15 text-[9px] font-mono shrink-0">
                                     {String(i + 1).padStart(2, "0")}
                                   </span>
-                                  <span className="font-light">{service.label}</span>
+                                  <span className="font-light">
+                                    {service.label}
+                                  </span>
                                 </Link>
                               ))}
                             </div>

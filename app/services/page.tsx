@@ -108,6 +108,26 @@ const services: Service[] = [
     tags: ["Facade", "Cladding", "Exterior"],
     href: "/services/facade-exterior-design",
   },
+  {
+    number: "10",
+    title: "Terrace Garden",
+    short: "Your Private Green Escape",
+    description:
+      "Transform your rooftop into a lush, functional retreat. We design terrace gardens that blend landscape, hardscape, and ambient lighting to create serene outdoor living spaces.",
+    image: "/services/terrace-garden.jpg",
+    tags: ["Terrace Garden", "Rooftop Design", "Landscape"],
+    href: "/services/terrace-garden-design",
+  },
+  {
+    number: "11",
+    title: "Vastu",
+    short: "Spaces Aligned With Positive Energy",
+    description:
+      "We integrate Vastu Shastra principles into every design — balancing energy flow, direction, and spatial harmony to create homes and offices that feel right from the inside out.",
+    image: "/services/vastu.jpg",
+    tags: ["Vastu Shastra", "Vastu Consultant", "Vastu Design"],
+    href: "/services/vastu-consultation",
+  },
 ];
 
 function ServiceRow({ service, index }: { service: Service; index: number }) {
@@ -294,7 +314,7 @@ export default function ServicesPage() {
           className="group flex items-center gap-4 bg-[#F5F0E8] px-8 py-4 hover:bg-white transition-colors duration-300"
         >
           <span className="text-[#1f4f3f] text-xs tracking-[0.25em] uppercase font-bold">
-            Get Free Consultation
+            Get Consultation at ₹250 / sq ft
           </span>
           <ArrowUpRight className="w-4 h-4 text-[#1f4f3f] group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform duration-200" />
         </Link>

@@ -32,7 +32,7 @@ const services: Service[] = [
     short: "Homes Designed for Living",
     description:
       "Your home should feel inevitable — as if it could only ever have looked this way. We craft residential spaces that balance beauty, comfort, and function in perfect proportion.",
-    image: "/services/residential.jpg",
+    image: "/services/residential/bedroom.jpeg",
     tags: ["Living Spaces", "Bedrooms", "Facades"],
   },
   {
@@ -50,7 +50,7 @@ const services: Service[] = [
     short: "Residential & Commercial",
     description:
       "Complete end-to-end project delivery. From first sketch to final handover, we manage every contractor, material, and milestone so you don't have to.",
-    image: "/services/turnkey.jpg",
+    image: "/outdoor.jpeg",
     tags: ["End-to-End", "Project Management", "Handover"],
   },
   {
@@ -59,7 +59,7 @@ const services: Service[] = [
     short: "Custom-Crafted for Every Space",
     description:
       "Furniture designed and built specifically for your space. Every piece is a collaboration — proportioned, detailed, and finished to match the architecture around it.",
-    image: "/services/furniture.jpg",
+    image: "/lobby_view.jpeg",
     tags: ["Custom Design", "Joinery", "Handcrafted"],
   },
   {
