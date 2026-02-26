@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Facade &", "Exterior", "Design."],
   heroSubtitle:
     "A building's facade is its first impression and lasting identity. We design exteriors that command attention, define streetscapes, and stand the test of time.",
-  heroImage: "/services/facade-hero.jpg",
+  heroImage: "/facade exterior.HEIC",
 
   overviewLabel: "The Service",
   overviewHeading: "The Face of Your Building",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "15+", label: "Material Systems" },
     { value: "100%", label: "Weather-Tested" },
   ],
-  overviewImage: "/services/facade-overview.jpg",
+  overviewImage: "/elevation.jpeg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Facade Services",
@@ -99,12 +99,24 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/facade-gallery-01.jpg", alt: "Modern Commercial Facade", span: "tall" },
-    { src: "/services/facade-gallery-02.jpg", alt: "Residential Elevation", span: "normal" },
-    { src: "/services/facade-gallery-03.jpg", alt: "Perforated Metal Screen", span: "normal" },
-    { src: "/services/facade-gallery-04.jpg", alt: "Facade Lighting", span: "wide" },
-    { src: "/services/facade-gallery-05.jpg", alt: "Stone Cladding Detail", span: "tall" },
-    { src: "/services/facade-gallery-06.jpg", alt: "Glass Curtain Wall", span: "normal" },
+    {
+      src: "/elevation(1).jpeg",
+      alt: "Modern Commercial Facade",
+      span: "tall",
+    },
+    {
+      src: "/commercial exterior.jpg",
+      alt: "Residential Elevation",
+      span: "normal",
+    },
+    { src: "/terrace.jpeg", alt: "Perforated Metal Screen", span: "normal" },
+    {
+      src: "/services/residential/final elevation.jpeg",
+      alt: "Facade Lighting",
+      span: "wide",
+    },
+    { src: "/elevation(2).jpeg", alt: "Stone Cladding Detail", span: "tall" },
+    { src: "/elevation.jpeg", alt: "Glass Curtain Wall", span: "normal" },
   ],
 
   ctaLabel: "Design Your Facade",

@@ -86,7 +86,7 @@ const gallery: GalleryItem[] = [
     title: "The Arch Headboard",
     category: "Beds & Headboards",
     material: "Bouclé & Walnut",
-    image: "/furniture/gallery-01.jpg",
+    image: "/bespoke-furniture.png",
     span: "tall",
   },
   {
@@ -94,7 +94,7 @@ const gallery: GalleryItem[] = [
     title: "Stone Top Dining Table",
     category: "Dining Tables",
     material: "Calacatta Marble & Oak",
-    image: "/furniture/gallery-02.jpg",
+    image: "/DINNING TABLE  (1).jpg",
     span: "normal",
   },
   {
@@ -102,7 +102,7 @@ const gallery: GalleryItem[] = [
     title: "Modular Sofa System",
     category: "Sofas & Seating",
     material: "Linen & Brass",
-    image: "/furniture/gallery-03.jpg",
+    image: "/a.jpeg",
     span: "normal",
   },
   {
@@ -110,7 +110,7 @@ const gallery: GalleryItem[] = [
     title: "Fluted Walk-in Wardrobe",
     category: "Storage & Wardrobes",
     material: "Lacquered MDF & Cane",
-    image: "/furniture/gallery-04.jpg",
+    image: "/furniture(1).jpg",
     span: "tall",
   },
   {
@@ -118,7 +118,7 @@ const gallery: GalleryItem[] = [
     title: "Island Kitchen",
     category: "Kitchen & Joinery",
     material: "Smoked Oak & Terrazzo",
-    image: "/furniture/gallery-05.jpg",
+    image: "/furniture(2).jpg",
     span: "wide",
   },
   {
@@ -126,7 +126,7 @@ const gallery: GalleryItem[] = [
     title: "The Library Wall",
     category: "Office & Study",
     material: "Solid Teak",
-    image: "/furniture/gallery-06.jpg",
+    image: "/furniture.png",
     span: "normal",
   },
   {
@@ -134,7 +134,7 @@ const gallery: GalleryItem[] = [
     title: "Curved Armchair",
     category: "Sofas & Seating",
     material: "Velvet & Beech",
-    image: "/furniture/gallery-07.jpg",
+    image: "/furniture(2).jpg",
     span: "normal",
   },
   {
@@ -142,7 +142,7 @@ const gallery: GalleryItem[] = [
     title: "Platform Bed",
     category: "Beds & Headboards",
     material: "Black Walnut",
-    image: "/furniture/gallery-08.jpg",
+    image: "/furniture(3).jpg",
     span: "wide",
   },
   {
@@ -150,7 +150,7 @@ const gallery: GalleryItem[] = [
     title: "Open Shelving Unit",
     category: "Storage & Wardrobes",
     material: "Powder-coated Steel & Glass",
-    image: "/furniture/gallery-09.jpg",
+    image: "/furniture(4).jpg",
     span: "tall",
   },
 ];
@@ -352,7 +352,7 @@ export default function BespokeFurniturePage() {
       {/* ── HERO ── */}
       <section className="relative w-full h-screen overflow-hidden bg-[#1a1a18]">
         <Image
-          src="/furniture/hero.jpg"
+          src="/a.jpeg"
           alt="Bespoke Furniture by Ridge Studio"
           fill
           className="object-cover opacity-45"

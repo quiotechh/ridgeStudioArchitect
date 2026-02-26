@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Architecture", "and", "Planning."],
   heroSubtitle:
     "From site analysis to construction drawings — rigorous architectural planning with a creative eye, delivered with precision at every stage.",
-  heroImage: "/services/architecture-hero.jpg",
+  heroImage: "/hall.jpeg",
 
   overviewLabel: "The Service",
   overviewHeading: "From Blueprint to Reality",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "100%", label: "Approval Rate" },
     { value: "0", label: "Tolerance for Error" },
   ],
-  overviewImage: "/services/architecture-overview.jpg",
+  overviewImage: "/From blueprint to home.png",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Architectural Services",
@@ -99,12 +99,12 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/architecture-gallery-01.jpg", alt: "Architectural Plans", span: "wide" },
-    { src: "/services/architecture-gallery-02.jpg", alt: "3D Visualisation", span: "tall" },
-    { src: "/services/architecture-gallery-03.jpg", alt: "Site Analysis", span: "normal" },
-    { src: "/services/architecture-gallery-04.jpg", alt: "Building Under Construction", span: "normal" },
-    { src: "/services/architecture-gallery-05.jpg", alt: "Completed Project", span: "tall" },
-    { src: "/services/architecture-gallery-06.jpg", alt: "Working Drawings", span: "normal" },
+    { src: "/architecture plan.jpg", alt: "Architectural Plans", span: "wide" },
+    { src: "/3d visualization.jpeg", alt: "3D Visualisation", span: "tall" },
+    { src: "/under construction.JPG", alt: "Site Analysis", span: "normal" },
+    { src: "/under construction(1).JPG", alt: "Building Under Construction", span: "normal" },
+    { src: "/elevation(1).jpeg", alt: "Completed Project", span: "tall" },
+    { src: "/Architectural_plan.png", alt: "Working Drawings", span: "normal" },
   ],
 
   ctaLabel: "Plan Your Project",

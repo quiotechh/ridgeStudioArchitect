@@ -22,8 +22,8 @@ const featured: Project = {
   title: "The Meridian Residence",
   category: "Residential Interior",
   year: "2024",
-  image: "/portfolio/featured.jpg",
-  location: "Ahmedabad, Gujarat",
+  image: "/hero/lobby_view.jpeg",
+  location: "Rohini, Delhi",
 };
 
 const projects: Project[] = [
@@ -32,32 +32,32 @@ const projects: Project[] = [
     title: "Arbor Commercial Hub",
     category: "Commercial Exterior",
     year: "2024",
-    image: "/portfolio/project-2.jpg",
-    location: "Surat, Gujarat",
+    image: "/commercial.jpeg",
+    location: "Rohini, Delhi",
   },
   {
     id: "03",
     title: "Casa Verde Villa",
     category: "Turnkey Residential",
     year: "2023",
-    image: "/portfolio/project-3.jpg",
-    location: "Vadodara, Gujarat",
+    image: "/lobby_view.jpeg",
+    location: "Rohini, Delhi",
   },
   {
     id: "04",
     title: "Studio Noir Office",
     category: "Commercial Interior",
     year: "2023",
-    image: "/portfolio/project-4.jpg",
-    location: "Ahmedabad, Gujarat",
+    image: "/outdoor.jpeg",
+    location: "Rohini, Delhi",
   },
   {
     id: "05",
     title: "Elm Street Facade",
     category: "Facade Design",
     year: "2023",
-    image: "/portfolio/project-5.jpg",
-    location: "Rajkot, Gujarat",
+    image: "/DH WALL  (1).jpg",
+    location: "Rohini, Delhi",
   },
 ];
 

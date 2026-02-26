@@ -249,7 +249,7 @@ export default function AboutPage() {
       {/* ── 1. HERO ── */}
       <section className="relative h-screen w-full overflow-hidden bg-[#0d2b22]">
         <Image
-          src="/about/about-hero.jpg"
+          src="/hero/bedroom.jpeg"
           alt="Ridge Studio Studio"
           fill
           className="object-cover opacity-40"
@@ -380,7 +380,7 @@ export default function AboutPage() {
               transition={{ duration: 0.9, delay: 0.25, ease }}
             >
               <Image
-                src="/about/studio.jpg"
+                src="/ridge office front.png"
                 alt="Ridge Studio"
                 fill
                 className="object-cover"

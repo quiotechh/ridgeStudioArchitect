@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Landscaping", "That", "Breathes."],
   heroSubtitle:
     "Outdoor spaces designed with the same precision as our interiors — gardens, courtyards, and terraces that extend architecture into nature.",
-  heroImage: "/services/landscaping-hero.jpg",
+  heroImage: "/outdoor.jpeg",
 
   overviewLabel: "The Service",
   overviewHeading: "Where Architecture Meets Nature",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "100%", label: "Climate-Responsive" },
     { value: "12+", label: "Years Experience" },
   ],
-  overviewImage: "/services/landscaping-overview.jpg",
+  overviewImage: "/DINNING TABLE  (2).jpg",
 
   offeringsLabel: "What We Offer",
   offeringsHeading: "Landscape Services",
@@ -99,12 +99,12 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/landscaping-gallery-01.jpg", alt: "Garden Design", span: "tall" },
-    { src: "/services/landscaping-gallery-02.jpg", alt: "Stone Pathway", span: "normal" },
-    { src: "/services/landscaping-gallery-03.jpg", alt: "Terrace Garden", span: "normal" },
-    { src: "/services/landscaping-gallery-04.jpg", alt: "Water Feature", span: "wide" },
-    { src: "/services/landscaping-gallery-05.jpg", alt: "Outdoor Seating", span: "normal" },
-    { src: "/services/landscaping-gallery-06.jpg", alt: "Landscape Lighting", span: "tall" },
+    { src: "/garden.jpg", alt: "Garden Design", span: "tall" },
+    { src: "/terrace-landscape.jpeg", alt: "Stone Pathway", span: "normal" },
+    { src: "/terrace-garden.jpeg", alt: "Terrace Garden", span: "normal" },
+    { src: "/landscape water.jpg", alt: "Water Feature", span: "wide" },
+    { src: "/outdoor-seating.jpeg", alt: "Outdoor Seating", span: "normal" },
+    { src: "/landscape lighting.jpg", alt: "Landscape Lighting", span: "tall" },
   ],
 
   ctaLabel: "Design Your Outdoors",

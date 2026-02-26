@@ -6,7 +6,7 @@ const data: ServicePageData = {
   heroHeading: ["Terrace", "Gardens."],
   heroSubtitle:
     "Transform your rooftop into a lush, functional retreat. We design terrace gardens that blend landscape, hardscape, and ambient lighting to create serene outdoor living spaces.",
-  heroImage: "/services/terrace-garden.jpg",
+  heroImage: "/terrace-garden.jpeg",
 
   overviewLabel: "The Service",
   overviewHeading: "Your Private Green Escape.",
@@ -20,7 +20,7 @@ const data: ServicePageData = {
     { value: "100%", label: "Custom Layouts" },
     { value: "360°", label: "End-to-End Service" },
   ],
-  overviewImage: "/services/terrace-garden-overview.jpg",
+  overviewImage: "/terrace-garden(1).jpeg",
 
   offeringsLabel: "What Is Included",
   offeringsHeading: "Complete Terrace Garden Service",
@@ -99,12 +99,28 @@ const data: ServicePageData = {
   ],
 
   galleryImages: [
-    { src: "/services/terrace-garden-gallery-01.jpg", alt: "Rooftop Garden Seating Area", span: "wide" },
-    { src: "/services/terrace-garden-gallery-02.jpg", alt: "Lush Terrace Planting", span: "tall" },
-    { src: "/services/terrace-garden-gallery-03.jpg", alt: "Hardscape & Decking", span: "normal" },
-    { src: "/services/terrace-garden-gallery-04.jpg", alt: "Ambient Terrace Lighting", span: "normal" },
-    { src: "/services/terrace-garden-gallery-05.jpg", alt: "Pergola & Shade Structure", span: "normal" },
-    { src: "/services/terrace-garden-gallery-06.jpg", alt: "Completed Terrace Garden", span: "tall" },
+    { src: "/terrace.jpeg", alt: "Rooftop Garden Seating Area", span: "wide" },
+    {
+      src: "/terrace-landscape.jpeg",
+      alt: "Lush Terrace Planting",
+      span: "tall",
+    },
+    { src: "/outdoor.jpeg", alt: "Hardscape & Decking", span: "normal" },
+    {
+      src: "/outdoor-seating.jpeg",
+      alt: "Ambient Terrace Lighting",
+      span: "normal",
+    },
+    {
+      src: "/terrace-garden(3).jpg",
+      alt: "Pergola & Shade Structure",
+      span: "normal",
+    },
+    {
+      src: "/terrace-garden(2).jpg",
+      alt: "Completed Terrace Garden",
+      span: "tall",
+    },
   ],
 
   ctaLabel: "Build Your Garden",

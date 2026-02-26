@@ -55,14 +55,14 @@ const projects: Project[] = [
     id: "01",
     title: "The Meridian Residence",
     category: "Residential",
-    location: "Ahmedabad, Gujarat",
+    location: "Rohini, Delhi",
     year: "2024",
     description:
       "A luxury residence designed around natural light and open living. The interior flows seamlessly from public to private spaces, anchored by a double-height living room and bespoke joinery throughout.",
     images: [
-      "/portfolio/project-01-1.jpg",
-      "/portfolio/project-01-2.jpg",
-      "/portfolio/project-01-3.jpg",
+      "/services/residential/final elevation.jpeg",
+      "/final elevation(2).jpeg",
+      // "/portfolio/project-01-3.jpg",
     ],
     span: "tall",
   },
@@ -70,24 +70,24 @@ const projects: Project[] = [
     id: "02",
     title: "Arbor Commercial Hub",
     category: "Commercial",
-    location: "Surat, Gujarat",
+    location: "Rohini, Delhi",
     year: "2024",
     description:
       "A contemporary commercial complex that redefines the workplace. Biophilic design principles, collaborative zones, and a facade that changes character with the light.",
-    images: ["/portfolio/project-02-1.jpg", "/portfolio/project-02-2.jpg"],
+    images: ["/a.jpeg", "lobby _view.jpeg"],
     span: "normal",
   },
   {
     id: "03",
     title: "Casa Verde Villa",
     category: "Turnkey",
-    location: "Vadodara, Gujarat",
+    location: "Rohini, Delhi",
     year: "2023",
     description:
       "Complete turnkey delivery of a 4-bedroom villa. From structural shell to final furnishing, every element was designed and executed in-house.",
     images: [
-      "/portfolio/project-03-1.jpg",
-      "/portfolio/project-03-2.jpg",
+      "/DH WALL  (1).jpg",
+      "/DH WALL  (2).jpg",
       "/portfolio/project-03-3.jpg",
     ],
     span: "wide",
@@ -96,73 +96,69 @@ const projects: Project[] = [
     id: "04",
     title: "Studio Noir Office",
     category: "Commercial",
-    location: "Ahmedabad, Gujarat",
+    location: "Rohini, Delhi",
     year: "2023",
     description:
       "A bold, dark-palette office interior for a creative agency. Custom millwork, acoustic panels, and dramatic pendant lighting create an atmosphere that fuels creativity.",
-    images: ["/portfolio/project-04-1.jpg", "/portfolio/project-04-2.jpg"],
+    images: ["/elevation.jpeg", "/elevation(2).jpeg"],
     span: "tall",
   },
   {
     id: "05",
     title: "Elm Street Facade",
     category: "Facade & Exterior",
-    location: "Rajkot, Gujarat",
+    location: "Rohini, Delhi",
     year: "2023",
     description:
       "A complete facade redesign that transformed a dated commercial building into a landmark. Perforated metal screens, warm timber accents, and precision lighting.",
-    images: ["/portfolio/project-05-1.jpg", "/portfolio/project-05-2.jpg"],
+    images: ["/hero/bedroom.jpeg", "/DINNING TABLE  (2).jpg"],
     span: "normal",
   },
   {
     id: "06",
     title: "The Oak Collection",
     category: "Bespoke Furniture",
-    location: "Ahmedabad, Gujarat",
+    location: "Rohini, Delhi",
     year: "2023",
     description:
       "A complete suite of bespoke furniture for a penthouse apartment. Solid oak dining table, custom shelving, and an upholstered headboard — all designed to proportion.",
-    images: [
-      "/portfolio/project-06-1.jpg",
-      "/portfolio/project-06-2.jpg",
-      "/portfolio/project-06-3.jpg",
-    ],
+    images: ["/outdoor-seating.jpeg", "/outdoor.jpeg", "/terrace.jpeg"],
     span: "normal",
   },
   {
     id: "07",
     title: "Skyline Penthouse",
     category: "Residential",
-    location: "Ahmedabad, Gujarat",
+    location: "Pitampura, Delhi",
     year: "2023",
     description:
       "A penthouse renovation that opens the entire top floor to panoramic city views. Retractable glass walls, a rooftop terrace, and an interior palette of stone, brass, and linen.",
-    images: ["/portfolio/project-07-1.jpg", "/portfolio/project-07-2.jpg"],
+    images: ["/heritage_restoration.jpg"],
     span: "wide",
   },
   {
     id: "08",
     title: "Heritage Haveli Restoration",
     category: "Renovation",
-    location: "Vadodara, Gujarat",
+    location: "Shalimar Bagh, Delhi",
     year: "2022",
     description:
       "A sensitive restoration of a 100-year-old haveli. Original stonework was preserved and restored, while modern amenities were seamlessly integrated.",
-    images: ["/portfolio/project-08-1.jpg", "/portfolio/project-08-2.jpg"],
+    images: ["/landscape lighting.jpg"],
     span: "tall",
   },
   {
     id: "09",
     title: "Riviera Resort Master Plan",
     category: "Architecture & Planning",
-    location: "Kutch, Gujarat",
+    location: "Rohini Sec-6, Delhi",
     year: "2022",
     description:
       "Master planning and architectural design for a boutique resort. Site-responsive design, local material palette, and passive cooling strategies throughout.",
     images: [
-      "/portfolio/project-09-1.jpg",
-      "/portfolio/project-09-2.jpg",
-      "/portfolio/project-09-3.jpg",
+      "/UG FLOOR REAR BEDROOM VIEW 3.jpg",
+      "/bedroom.jpeg",
+      "UG FLOOR REAR BEDROOM VIEW 4.jpg",
     ],
     span: "normal",
   },
@@ -170,22 +166,26 @@ const projects: Project[] = [
     id: "10",
     title: "Aura Clinic",
     category: "Commercial",
-    location: "Rajkot, Gujarat",
+    location: "Rithala, Delhi",
     year: "2022",
     description:
       "A calming, precision-designed medical clinic. Clean geometry, soft lighting, and a material palette that balances clinical function with warmth.",
-    images: ["/portfolio/project-10-1.jpg", "/portfolio/project-10-2.jpg"],
+    images: ["/turnkey.jpeg", "/turnkey(1).jpeg"],
     span: "normal",
   },
   {
     id: "11",
     title: "The Loft Apartment",
     category: "Renovation",
-    location: "Surat, Gujarat",
+    location: "Rohini sec-24, Delhi",
     year: "2022",
     description:
       "Transformation of a bare concrete shell into a refined urban loft. Exposed services, polished floors, and a kitchen island that anchors the open plan.",
-    images: ["/portfolio/project-11-1.jpg", "/portfolio/project-11-2.jpg"],
+    images: [
+      "/pink bedroom.jpeg",
+      "/pink bedroom(1).jpeg",
+      "/pink bedroom(2).jpeg",
+    ],
     span: "normal",
   },
   {
@@ -196,7 +196,7 @@ const projects: Project[] = [
     year: "2022",
     description:
       "A collection of modular furniture systems designed for compact urban living. Adaptable, beautiful, and built to last.",
-    images: ["/portfolio/project-12-1.jpg", "/portfolio/project-12-2.jpg"],
+    images: ["/hero/hall.jpeg", "/BEDROOM .jpg.jpeg"],
     span: "tall",
   },
 ];
@@ -535,8 +535,8 @@ export default function PortfolioPage() {
             animate={isHeaderInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.6, delay: 0.4, ease }}
           >
-            {projects.length}+ projects completed across Gujarat. Each one a
-            story of precision, craft, and collaboration.
+            {projects.length}+ projects completed across Delhi. Each one a story
+            of precision, craft, and collaboration.
           </motion.p>
         </div>
       </div>

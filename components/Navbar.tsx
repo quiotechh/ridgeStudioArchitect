@@ -55,6 +55,12 @@ export default function Navbar() {
   const [mobileServicesOpen, setMobileServicesOpen] = useState(false);
   const dropdownRef = useRef<HTMLLIElement>(null);
   const timeoutRef = useRef<NodeJS.Timeout | null>(null);
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => setMounted(true), 0);
+    return () => clearTimeout(timer);
+  }, []);
 
   useEffect(() => {
     const handleScroll = () => setScrolled(window.scrollY > 20);
@@ -208,128 +214,130 @@ export default function Navbar() {
 
         {/* ── Mobile Hamburger ── */}
         <div className="lg:hidden">
-          <Sheet open={open} onOpenChange={setOpen}>
-            <SheetTrigger asChild>
-              <Button
-                variant="ghost"
-                size="icon"
-                className="text-[#F5F0E8] hover:bg-[#F5F0E8]/10 hover:text-[#F5F0E8]"
-              >
-                <Menu className="w-6 h-6" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent
-              side="right"
-              className="bg-[#1f4f3f] border-l border-[#F5F0E8]/10 w-80 flex flex-col p-0 overflow-y-auto"
-            >
-              <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
-              {/* Logo */}
-              <div className="flex items-center gap-3 p-8 pb-6 border-b border-[#F5F0E8]/10">
-                <Image
-                  src="/logo/ridge_logo.png"
-                  alt="Ridge Studio Architects"
-                  width={40}
-                  height={40}
-                  className="object-contain"
-                />
-                <div className="flex flex-col leading-tight">
-                  <span className="text-white text-sm font-semibold tracking-wide">
-                    Ridge Studio Architects
-                  </span>
-                  <span className="text-white/70 text-[11px] mt-0.5">
-                    Architecture • Interior • Structure
-                  </span>
-                </div>
-              </div>
-
-              {/* Mobile Nav Links */}
-              <div className="flex flex-col px-8 py-6 flex-1">
-                {navLinks.map((link) =>
-                  link.hasDropdown ? (
-                    <div key={link.href} className="flex flex-col">
-                      {/* Services toggle */}
-                      <button
-                        onClick={() => setMobileServicesOpen((prev) => !prev)}
-                        className="flex items-center justify-between text-[#F5F0E8] font-serif text-xl font-medium tracking-wide py-3 cursor-pointer"
-                      >
-                        <span>{link.label}</span>
-                        <ChevronDown
-                          className={`w-4 h-4 text-[#F5F0E8]/40 transition-transform duration-300 ${
-                            mobileServicesOpen ? "rotate-180" : ""
-                          }`}
-                        />
-                      </button>
-
-                      {/* Mobile Services Sub-menu */}
-                      <AnimatePresence>
-                        {mobileServicesOpen && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{
-                              duration: 0.3,
-                              ease: [0.76, 0, 0.24, 1],
-                            }}
-                            className="overflow-hidden"
-                          >
-                            <div className="flex flex-col border-l border-[#F5F0E8]/10 ml-2 pl-4 pb-2">
-                              {/* All Services */}
-                              <Link
-                                href="/services"
-                                onClick={() => setOpen(false)}
-                                className="text-[#F5F0E8]/70 text-xs tracking-[0.2em] uppercase font-semibold py-2 hover:text-[#F5F0E8] transition-colors duration-200"
-                              >
-                                View All Services
-                              </Link>
-
-                              <div className="w-full h-px bg-[#F5F0E8]/10 my-1" />
-
-                              {serviceLinks.map((service, i) => (
-                                <Link
-                                  key={service.href}
-                                  href={service.href}
-                                  onClick={() => setOpen(false)}
-                                  className="flex items-center gap-3 text-[#F5F0E8]/50 hover:text-[#F5F0E8] text-sm py-2 transition-colors duration-200"
-                                >
-                                  <span className="text-[#F5F0E8]/15 text-[9px] font-mono shrink-0">
-                                    {String(i + 1).padStart(2, "0")}
-                                  </span>
-                                  <span className="font-light">
-                                    {service.label}
-                                  </span>
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
-                    </div>
-                  ) : (
-                    <Link
-                      key={link.href}
-                      href={link.href}
-                      onClick={() => setOpen(false)}
-                      className="text-[#F5F0E8] font-serif text-xl font-medium hover:text-[#F5F0E8]/60 transition-colors duration-300 tracking-wide py-3"
-                    >
-                      {link.label}
-                    </Link>
-                  ),
-                )}
-              </div>
-
-              {/* Mobile CTA */}
-              <div className="p-8 pt-0">
-                <Link
-                  href="/contact"
-                  onClick={() => setOpen(false)}
-                  className="block text-center text-[#1f4f3f] bg-[#F5F0E8] hover:bg-transparent hover:text-[#F5F0E8] border border-[#F5F0E8] text-[10px] tracking-[0.22em] uppercase font-semibold px-6 py-4 transition-all duration-300"
+          {mounted && (
+            <Sheet open={open} onOpenChange={setOpen}>
+              <SheetTrigger asChild>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  className="text-[#F5F0E8] hover:bg-[#F5F0E8]/10 hover:text-[#F5F0E8]"
                 >
-                  Get in Touch
-                </Link>
-              </div>
-            </SheetContent>
-          </Sheet>
+                  <Menu className="w-6 h-6" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent
+                side="right"
+                className="bg-[#1f4f3f] border-l border-[#F5F0E8]/10 w-80 flex flex-col p-0 overflow-y-auto"
+              >
+                <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+                {/* Logo */}
+                <div className="flex items-center gap-3 p-8 pb-6 border-b border-[#F5F0E8]/10">
+                  <Image
+                    src="/logo/ridge_logo.png"
+                    alt="Ridge Studio Architects"
+                    width={40}
+                    height={40}
+                    className="object-contain"
+                  />
+                  <div className="flex flex-col leading-tight">
+                    <span className="text-white text-sm font-semibold tracking-wide">
+                      Ridge Studio Architects
+                    </span>
+                    <span className="text-white/70 text-[11px] mt-0.5">
+                      Architecture • Interior • Structure
+                    </span>
+                  </div>
+                </div>
+
+                {/* Mobile Nav Links */}
+                <div className="flex flex-col px-8 py-6 flex-1">
+                  {navLinks.map((link) =>
+                    link.hasDropdown ? (
+                      <div key={link.href} className="flex flex-col">
+                        {/* Services toggle */}
+                        <button
+                          onClick={() => setMobileServicesOpen((prev) => !prev)}
+                          className="flex items-center justify-between text-[#F5F0E8] font-serif text-xl font-medium tracking-wide py-3 cursor-pointer"
+                        >
+                          <span>{link.label}</span>
+                          <ChevronDown
+                            className={`w-4 h-4 text-[#F5F0E8]/40 transition-transform duration-300 ${
+                              mobileServicesOpen ? "rotate-180" : ""
+                            }`}
+                          />
+                        </button>
+
+                        {/* Mobile Services Sub-menu */}
+                        <AnimatePresence>
+                          {mobileServicesOpen && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: "auto", opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{
+                                duration: 0.3,
+                                ease: [0.76, 0, 0.24, 1],
+                              }}
+                              className="overflow-hidden"
+                            >
+                              <div className="flex flex-col border-l border-[#F5F0E8]/10 ml-2 pl-4 pb-2">
+                                {/* All Services */}
+                                <Link
+                                  href="/services"
+                                  onClick={() => setOpen(false)}
+                                  className="text-[#F5F0E8]/70 text-xs tracking-[0.2em] uppercase font-semibold py-2 hover:text-[#F5F0E8] transition-colors duration-200"
+                                >
+                                  View All Services
+                                </Link>
+
+                                <div className="w-full h-px bg-[#F5F0E8]/10 my-1" />
+
+                                {serviceLinks.map((service, i) => (
+                                  <Link
+                                    key={service.href}
+                                    href={service.href}
+                                    onClick={() => setOpen(false)}
+                                    className="flex items-center gap-3 text-[#F5F0E8]/50 hover:text-[#F5F0E8] text-sm py-2 transition-colors duration-200"
+                                  >
+                                    <span className="text-[#F5F0E8]/15 text-[9px] font-mono shrink-0">
+                                      {String(i + 1).padStart(2, "0")}
+                                    </span>
+                                    <span className="font-light">
+                                      {service.label}
+                                    </span>
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                        </AnimatePresence>
+                      </div>
+                    ) : (
+                      <Link
+                        key={link.href}
+                        href={link.href}
+                        onClick={() => setOpen(false)}
+                        className="text-[#F5F0E8] font-serif text-xl font-medium hover:text-[#F5F0E8]/60 transition-colors duration-300 tracking-wide py-3"
+                      >
+                        {link.label}
+                      </Link>
+                    ),
+                  )}
+                </div>
+
+                {/* Mobile CTA */}
+                <div className="p-8 pt-0">
+                  <Link
+                    href="/contact"
+                    onClick={() => setOpen(false)}
+                    className="block text-center text-[#1f4f3f] bg-[#F5F0E8] hover:bg-transparent hover:text-[#F5F0E8] border border-[#F5F0E8] text-[10px] tracking-[0.22em] uppercase font-semibold px-6 py-4 transition-all duration-300"
+                  >
+                    Get in Touch
+                  </Link>
+                </div>
+              </SheetContent>
+            </Sheet>
+          )}
         </div>
       </div>
     </nav>
