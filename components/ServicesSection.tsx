@@ -59,7 +59,7 @@ const services: Service[] = [
     short: "Custom-Crafted for Every Space",
     description:
       "Furniture designed and built specifically for your space. Every piece is a collaboration — proportioned, detailed, and finished to match the architecture around it.",
-    image: "/lobby_view.jpeg",
+    image: "/hero/lobby_view.jpeg",
     tags: ["Custom Design", "Joinery", "Handcrafted"],
   },
   {

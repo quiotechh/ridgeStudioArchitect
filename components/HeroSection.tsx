@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
+import Image from "next/image";
 
 type Slide = {
   image: string;
@@ -64,14 +65,36 @@ export default function HeroSection() {
       <AnimatePresence mode="sync">
         <motion.div
           key={current}
-          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${slides[current].image})` }}
+          className="absolute inset-0"
           initial={{ opacity: 0, scale: 1.04 }}
           animate={{ opacity: 1, scale: 1 }}
           exit={{ opacity: 0, scale: 0.98 }}
           transition={{ duration: 1.2, ease: [0.25, 0.1, 0.25, 1] }}
-        />
+        >
+          <Image
+            src={slides[current].image}
+            alt={slides[current].heading}
+            fill
+            className="object-cover object-center"
+            // Preload the first slide for fastest LCP
+            priority={current === 0}
+            // Eagerly load the next slide to reduce wait on transition
+            loading={current === 0 ? "eager" : "lazy"}
+            sizes="100vw"
+          />
+        </motion.div>
       </AnimatePresence>
+
+      {/* Preload adjacent slide in the background (hidden) */}
+      <div className="sr-only" aria-hidden>
+        <Image
+          src={slides[(current + 1) % slides.length].image}
+          alt=""
+          fill
+          sizes="1px"
+          priority
+        />
+      </div>
 
       {/* Overlay */}
       <div className="absolute inset-0 bg-black/55" />
