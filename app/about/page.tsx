@@ -27,8 +27,8 @@ const founders = [
     specialization: "Architecture & Planning",
     quote:
       "Architecture is not about buildings — it is about the people who inhabit them. Every line I draw is a conversation with the future.",
-    image: "/about/gaurav professional.jpg",
-    poster: "/about/gaurav professional.jpg",
+    image: "/about/gaurav professional.JPG",
+    poster: "/about/gaurav professional.JPG",
   },
   {
     id: "02",
@@ -37,8 +37,8 @@ const founders = [
     specialization: "Interior & Spatial Design",
     quote:
       "An interior should feel inevitable — as though the space could never have existed any other way. That precision is what drives me.",
-    image: "/about/khushi professional.jpg",
-    poster: "/about/khushi professional.jpg",
+    image: "/about/khushi professional.JPG",
+    poster: "/about/khushi professional.JPG",
   },
 ];
 
