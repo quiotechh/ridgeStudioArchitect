@@ -77,9 +77,8 @@ export default function HeroSection() {
             fill
             className="object-cover object-center"
             // Preload the first slide for fastest LCP
-            priority={current === 0}
+            priority
             // Eagerly load the next slide to reduce wait on transition
-            loading={current === 0 ? "eager" : "lazy"}
             sizes="100vw"
           />
         </motion.div>
