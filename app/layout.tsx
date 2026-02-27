@@ -24,6 +24,9 @@ export const metadata: Metadata = {
     icon: "/logo/ridge_logo.png",
     apple: "/logo/ridge_logo.png",
   },
+  verification: {
+    google: "MXPs5Jvf2jKJqGCUs13HUmz5UjTHcdSV1xM8bPqIhds" 
+  }
 };
 
 export default function RootLayout({
