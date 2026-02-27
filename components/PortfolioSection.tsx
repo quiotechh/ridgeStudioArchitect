@@ -40,7 +40,7 @@ const projects: Project[] = [
     title: "Casa Verde Villa",
     category: "Turnkey Residential",
     year: "2023",
-    image: "/lobby_view.jpeg",
+    image: "/a.jpeg",
     location: "Rohini, Delhi",
   },
   {
@@ -118,13 +118,13 @@ function FeaturedCard({ project }: { project: Project }) {
           </motion.h3>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="w-12 h-12 bg-[#F5F0E8] flex items-center justify-center shrink-0 ml-6"
           animate={{ scale: hovered ? 1.1 : 1, rotate: hovered ? 45 : 0 }}
           transition={{ duration: 0.3 }}
         >
           <ArrowUpRight className="w-5 h-5 text-[#1f4f3f]" />
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Year tag */}
@@ -201,7 +201,7 @@ function SmallCard({ project, index }: { project: Project; index: number }) {
           </motion.h4>
         </div>
 
-        <motion.div
+        {/* <motion.div
           className="w-8 h-8 border border-[#F5F0E8]/30 flex items-center justify-center shrink-0 ml-4"
           animate={{
             backgroundColor: hovered ? "#F5F0E8" : "transparent",
@@ -209,11 +209,11 @@ function SmallCard({ project, index }: { project: Project; index: number }) {
           }}
           transition={{ duration: 0.3 }}
         >
-          <ArrowUpRight
+          {/* <ArrowUpRight
             className="w-3.5 h-3.5 transition-colors duration-300"
             style={{ color: hovered ? "#1f4f3f" : "#F5F0E8" }}
           />
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Year */}
