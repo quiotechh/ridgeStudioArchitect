@@ -21,8 +21,8 @@ export const metadata: Metadata = {
   description:
     "Ridge Studio Architects | Architecture & Interior Design in Pitampura, Delhi. Expert residential, commercial interiors, facade design & turnkey projects. 340+ completed projects across Gujarat & Delhi.",
   icons: {
-    icon: "/ridge_logo.png",
-    apple: "/ridge_logo.png",
+    icon: "/logo/ridge_logo.png",
+    apple: "/logo/ridge_logo.png",
   },
 };
 
